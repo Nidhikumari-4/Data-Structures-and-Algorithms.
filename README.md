@@ -161,10 +161,14 @@ int main() {
   return 0;
 }
 
-/*  when the wall1 object is created, the Wall() constructor is called. This sets the length variable of the object to 5.5
+/*  when the wall1 object is created, the Wall() 
+constructor is called. This sets the length variable 
+of the object to 5.5
 */
 
-/* /*  /* Note-- If no constructor is defined in our class, then the C++ compiler will automatically create a default constructor with an empty code and no parameters.
+/* /*  /* Note-- If no constructor is defined in our class,
+ then the C++ compiler will automatically create a default
+  constructor with an empty code and no parameters.
 
 */ 
 ```
@@ -575,7 +579,9 @@ int main ()
 
 /* To do encapsulation-
 1) Make all the data members private.
-2) Create public setter and getter functions for each data member in such a way that the set function set the value of data member and get function get the value of data member.
+2) Create public setter and getter functions for each data member 
+in such a way that the set function set the value of data member 
+and get function get the value of data member.
 */
 
 #include<iostream>

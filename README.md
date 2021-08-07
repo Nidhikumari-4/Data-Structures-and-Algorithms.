@@ -284,6 +284,198 @@ int main(){
    
    ************************************************************************
    
-## 5. [INHERITANCE](https://youtu.be/DHVo9hvcQMI) - 
+## 5. [INHERITANCE](https://youtu.be/DHVo9hvcQMI) 
+
+   - Inheritance is the process where a class is derieved from its parent class and having the properties,characteristics of parent class.
+
+   - What is child class?
+      - A class that inherits another class is known as child class, it is also known as derived class or subclass.
+
+   -  What is parent class?
+      - The class that is being inherited by other class is known as parent class, super class or base class.
+
+```CPP
+      class parent_class
+{
+    //Body of parent class
+};
+class child_class : access_modifier parent_class
+{
+   //Body of child class
+};
+```
+```cpp
+// C++ program to demonstrate inheritance
+
+#include <iostream>
+using namespace std;
+
+// base class
+class Animal {
+
+   public:
+    void eat() {
+        cout << "I can eat!" << endl;
+    }
+
+    void sleep() {
+        cout << "I can sleep!" << endl;
+    }
+};
+
+// derived class
+class Dog : public Animal {
+ 
+   public:
+    void bark() {
+        cout << "I can bark! Woof woof!!" << endl;
+    }
+};
+
+int main() {
+    // Create object of the Dog class
+    Dog dog1;
+
+    // Calling members of the base class
+    dog1.eat();
+    dog1.sleep();
+
+    // Calling member of the derived class
+    dog1.bark();
+
+    return 0;
+}
+```
+   
+
+ ###  <b> Types of Inheritance</b>
+1) Single inheritance
+2) Multilevel inheritance
+3) Multiple inheritance
+4) Hierarchical inheritance
+5) Hybrid inheritance
+
+ ###   <b>SINGLE INHERITANCE</b> - In Single inheritance one class inherits one class exactly.
+
+   - B inherits A
+
+```cpp
+#include <iostream>
+using namespace std;
+class A {
+public:
+  A(){
+     cout<<"Constructor of A class"<<endl;
+  }
+};
+class B: public A {
+public:
+  B(){
+     cout<<"Constructor of B class";
+  }
+};
+int main() {
+   //Creating object of class B
+   B obj;
+   return 0;
+}
+```
+
+###   <b>MULTILEVEL INHERITANCE</b> - In this type of inheritance one class inherits another child class
+   - C inherits B and B inherits A
+
+   ```cpp
+   #include <iostream>
+using namespace std;
+class A {
+public:
+  A(){
+     cout<<"Constructor of A class"<<endl;
+  }
+};
+class B: public A {
+public:
+  B(){
+     cout<<"Constructor of B class"<<endl;
+  }
+};
+class C: public B {
+public:
+  C(){
+     cout<<"Constructor of C class"<<endl;
+  }
+};
+int main() {
+  //Creating object of class C
+  C obj;
+  return 0;
+}
+```
+
+
+###   <b>MULTIPLE INHERITANCE</b> - In multiple inheritance, a class can inherit more than one class. 
+
+   - C inherits A and B both
+```cpp
+#include <iostream>
+using namespace std;
+class A {
+public:
+  A(){
+     cout<<"Constructor of A class"<<endl;
+  }
+};
+class B {
+public:
+  B(){
+     cout<<"Constructor of B class"<<endl;
+  }
+};
+class C: public A, public B {
+public:
+  C(){
+     cout<<"Constructor of C class"<<endl;
+  }
+};
+int main() {
+   //Creating object of class C
+   C obj;
+   return 0;
+}
+```
+
+###   <b>HIERARCHIAL INHERITANCE</b> - In this type of inheritance, one parent class has more than one child class.
+
+   - Class B and C inherits class A
+
+```cpp
+#include <iostream>
+using namespace std;
+class A {
+public:
+  A(){
+     cout<<"Constructor of A class"<<endl;
+  }
+};
+class B: public A {
+public:
+  B(){ 
+     cout<<"Constructor of B class"<<endl;
+  }
+};
+class C: public A{
+public:
+  C(){
+     cout<<"Constructor of C class"<<endl;
+  }
+};
+int main() {
+   //Creating object of class C
+   C obj;
+   return 0;
+}
+```
+
+###   <b>HYBRID INHERITANCE</b> - Hybrid inheritance is a combination of more than one type of inheritance. For example, A child and parent class relationship that follows multiple and hierarchical inheritance both can be called hybrid inheritance.
 
 

@@ -672,112 +672,15 @@ int main(){
 
 ## 8. [FRIEND CLASS](https://youtu.be/DHVo9hvcQMI)
 
-```cpp
-#include<iostream>
+## 9. [FRIEND FUNCTION](https://youtu.be/DHVo9hvcQMI)
 
-using namespace std; 
+## 10. [Call By Value](https://youtu.be/HEiPxjVR8CU)
 
-class XYZ{
-    private:
-        char ch='A';
-        int num = 11;
-    public:
-        friend class ABC;
+## 11. [Call By Reference](https://youtu.be/HEiPxjVR8CU)
 
-};
+## 12. [Virtual Function](https://youtu.be/DHVo9hvcQMI)
 
-class ABC {
-    public:
-    void disp(XYZ obj){
-        cout<<obj.ch<<endl;
-        cout<<obj.num<<endl;
-    }
-};
-
-int main ()
-{
-    ABC obj;
-    XYZ obj2;
-    obj.disp(obj2);
-    return 0;
-}
-```
-
-************************************************************************************
-
-## 8. [FRIEND FUNCTION](https://youtu.be/DHVo9hvcQMI)
-
-```cpp
-#include <iostream>
-using namespace std;
-class XYZ
-{
-private:
-   int num = 100;
-   char ch = 'Z';
-
-public:
-   friend void disp(XYZ obj);
-};
-//Global Function
-void disp(XYZ obj)
-{
-   cout << obj.num << endl;
-   cout << obj.ch << endl;
-}
-int main()
-{
-   XYZ obj;
-   disp(obj);
-   return 0;
-}
-
-```
-***************************************************************************
-
-## 8. [Call By Value](https://youtu.be/HEiPxjVR8CU)
-
-## 10. [Call By Reference](https://youtu.be/HEiPxjVR8CU)
-
-## 10. [Virtual Function](https://youtu.be/DHVo9hvcQMI)
-
-```cpp
-/* Virtual Function */
-#include<iostream>
-
-using namespace std; // this is namespace
-
-class base{
-    public:
-        virtual void print(){
-            cout<<"I'm from base class"<<endl;
-        }
-        void show(){
-            cout<<"I'm from base class"<<endl;
-        }
-};
-class dereived : public base{
-    public:
-        void print(){
-            cout<<"I'm from derived class"<<endl;
-        }
-        void show(){
-            cout<<"I'm from derived class"<<endl;
-        }
-};
-
-int main ()
-{
-    base* bptr;
-    dereived d;
-    bptr = &d;
-
-    bptr->print();
-    bptr->show();
-
-    return 0;
-}
-```
+## 13. [Dynamic Memory Allocation](https://youtu.be/UY2_lLpDu7U)
 
 
 

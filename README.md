@@ -72,6 +72,10 @@ int main ()
 - <b>ACCESS MODIFIERS </b> -  Access modifiers are used to set boundaries for availability of members of class it can be  it's data members or member functions.You can use either one, two or all 3 modifiers in the same class to set different boundaries for different class members. 
    #### There are 3  ACCESS MODIFIERS in c++.
 
+1) The public Members
+2) The private Members
+3) The protected Members
+
 
 - <b>The public Members</b> - "Public" means visible to all. So all the class members declared under public will be available to everyone. The data members and member functions declared under public member can be accessed by other classes too.
 
@@ -115,6 +119,11 @@ class PrivateAccess
    
  
  ###  <b>There are 3 Types of Constructors in C++</b>
+ 1) Default constructor
+2) Parameterised constructor
+3) Copy constructor
+
+
    ###    <b>DEFAULT CONSTRUCTOR</b> - Default constructor is the constructor which doesn't take any argument. It has no parameter.
 
 ```cpp

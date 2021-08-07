@@ -18,6 +18,12 @@
    ### <b>CLASS</B> - Classes are type of gropus in which two things come variables and functions.
    ### <b>OBJECT</b> - These are individual instant/entity of the class that has some characheristics and behaviours.
 
+### FEATURES-
+   - Encapsulation
+   - Abstraction
+   - Inheritance
+   - Polymorphism
+
    ```cpp
    #include<iostream>
 
@@ -486,5 +492,291 @@ int main() {
 ```
 
 ###   <b>HYBRID INHERITANCE</b> - Hybrid inheritance is a combination of more than one type of inheritance. For example, A child and parent class relationship that follows multiple and hierarchical inheritance both can be called hybrid inheritance.
+
+*************************************************************************
+
+
+## 5. [POLYMORPHISM](https://youtu.be/DHVo9hvcQMI) 
+
+-  Polymorphism is a feature of OOPs that allows the object to behave differently in different conditions. In C++ we have two types of polymorphism:
+
+1.Compile Time(Function overloading)
+2.Run Time (Function Overrriding)
+
+```cpp
+// (Function Overloading)
+
+// 1) Compile time Polymorphism – This is also known as static (or early) binding.
+
+#include<iostream>
+
+using namespace std; // this is namespace
+
+class Add{
+    public:
+        int sum(int num1, int num2){
+            return num1+num2;
+        }
+        int sum(int num1, int num2, int num3){
+            return num1+num2+num3;
+        }
+};
+
+int main ()
+{
+    Add obj;
+
+    cout<<"Output: "<<obj.sum(10,20)<<endl;
+    cout<<"Output: "<<obj.sum(10,20,30)<<endl;
+
+    return 0;
+}
+
+// (Function Overriding)
+
+ //2) Runtime Polymorphism – This is also known as dynamic (or late) binding.
+
+#include<iostream>
+
+using namespace std; // this is namespace
+
+class A{
+    public:
+        void display(){
+            cout<<"This is Super/Parent Class Function"<<endl;
+        }
+};
+
+class B : public A{
+    public:
+        void display(){
+            cout<<"This is Base/Child Class Function";
+        }
+};
+
+int main ()
+{
+    A obj;
+    obj.display();
+
+    B obj2;
+    obj2.display();
+    return 0;
+}
+```
+**********************************************************
+
+
+## 6. [ENCAPSULATION](https://youtu.be/DHVo9hvcQMI) 
+
+   - Rapping of data and its ember functions in a single unit is called Encapsulation.It is one of the popular feature of Object Oriented Programming(OOPs) that helps in data hiding.
+
+```cpp
+
+/* To do encapsulation-
+1) Make all the data members private.
+2) Create public setter and getter functions for each data member in such a way that the set function set the value of data member and get function get the value of data member.
+*/
+
+#include<iostream>
+using namespace std;
+class ExampleEncap{
+private:
+   /* Since we have marked these data members private,
+    * any entity outside this class cannot access these
+    * data members directly, they have to use getter and
+    * setter functions.
+    */
+   int num;
+   char ch;
+public:
+   /* Getter functions to get the value of data members.
+    * Since these functions are public, they can be accessed
+    * outside the class, thus provide the access to data members
+    * through them
+    */
+   int getNum() const {
+      return num;
+   }
+   char getCh() const {
+      return ch;
+   }
+   /* Setter functions, they are called for assigning the values
+    * to the private data members.
+    */
+   void setNum(int num) {
+      this->num = num;
+   }
+   void setCh(char ch) {
+      this->ch = ch;
+   }
+};
+int main(){
+   ExampleEncap obj;
+   obj.setNum(100);
+   obj.setCh('A');
+   cout<<obj.getNum()<<endl;
+   cout<<obj.getCh()<<endl;
+   return 0;
+}
+```
+
+****************************************************************************************
+
+## 7. [ABSTRACTION](https://youtu.be/DHVo9hvcQMI)
+
+   - Data abstraction refers to providing only essential information to the outside world and hiding their background details, i.e., to represent the needed information in program without presenting the details.
+
+
+
+```cpp
+
+#include <iostream>
+using namespace std;
+class AbstractionExample{
+private:
+   /* By making these data members private, I have
+    * hidden them from outside world.
+    * These data members are not accessible outside
+    * the class. The only way to set and get their
+    * values is through the public functions.
+    */
+   int num;
+   char ch;
+
+public:
+   void setMyValues(int n, char c) {
+      num = n; ch = c;
+   }
+   void getMyValues() {
+      cout<<"Numbers is: "<<num<< endl;
+      cout<<"Char is: "<<ch<<endl;
+   }
+};
+int main(){
+   AbstractionExample obj;
+   obj.setMyValues(100, 'X');
+   obj.getMyValues();
+   return 0;
+}
+
+```
+
+**************************************************************************************
+
+## 8. [FRIEND CLASS](https://youtu.be/DHVo9hvcQMI)
+
+```cpp
+#include<iostream>
+
+using namespace std; 
+
+class XYZ{
+    private:
+        char ch='A';
+        int num = 11;
+    public:
+        friend class ABC;
+
+};
+
+class ABC {
+    public:
+    void disp(XYZ obj){
+        cout<<obj.ch<<endl;
+        cout<<obj.num<<endl;
+    }
+};
+
+int main ()
+{
+    ABC obj;
+    XYZ obj2;
+    obj.disp(obj2);
+    return 0;
+}
+```
+
+************************************************************************************
+
+## 8. [FRIEND FUNCTION](https://youtu.be/DHVo9hvcQMI)
+
+```cpp
+#include <iostream>
+using namespace std;
+class XYZ
+{
+private:
+   int num = 100;
+   char ch = 'Z';
+
+public:
+   friend void disp(XYZ obj);
+};
+//Global Function
+void disp(XYZ obj)
+{
+   cout << obj.num << endl;
+   cout << obj.ch << endl;
+}
+int main()
+{
+   XYZ obj;
+   disp(obj);
+   return 0;
+}
+
+```
+***************************************************************************
+
+## 8. [Call By Value](https://youtu.be/HEiPxjVR8CU)
+
+## 10. [Call By Reference](https://youtu.be/HEiPxjVR8CU)
+
+## 10. [Virtual Function](https://youtu.be/DHVo9hvcQMI)
+
+```cpp
+/* Virtual Function */
+#include<iostream>
+
+using namespace std; // this is namespace
+
+class base{
+    public:
+        virtual void print(){
+            cout<<"I'm from base class"<<endl;
+        }
+        void show(){
+            cout<<"I'm from base class"<<endl;
+        }
+};
+class dereived : public base{
+    public:
+        void print(){
+            cout<<"I'm from derived class"<<endl;
+        }
+        void show(){
+            cout<<"I'm from derived class"<<endl;
+        }
+};
+
+int main ()
+{
+    base* bptr;
+    dereived d;
+    bptr = &d;
+
+    bptr->print();
+    bptr->show();
+
+    return 0;
+}
+```
+
+
+
+
+
+
 
 

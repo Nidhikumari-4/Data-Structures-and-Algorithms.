@@ -16,8 +16,137 @@
    - <b>CLASS</B> - Classes are type of gropus in which two things come variables and functions.
    - <b>OBJECT</b> - These are individual instant/entity of the class that has some characheristics and behaviours.
 ## 2. [CONSTRUCTOR.](https://youtu.be/DHVo9hvcQMI)
+ 
+ ### - <b>There are 3 Types of Constructors in C++</b>
+   - <b>Default Constructor</b> - Default constructor is the constructor which doesn't take any argument. It has no parameter.
+
+```cpp
+class_name(parameter1, parameter2, ...)
+{ 
+    // constructor Definition 
+}
+```
+### EXAMPLE
+```cpp
+#include <iostream>
+using namespace std;
+
+// declare a class
+class  Wall {
+  private:
+    double length;
+
+  public:
+    // default constructor to initialize variable
+    Wall() {
+      length = 5.5;
+      cout << "Creating a wall." << endl;
+      cout << "Length = " << length << endl;
+    }
+};
+
+int main() {
+  Wall wall1;
+  return 0;
+}
+
+/*  when the wall1 object is created, the Wall() constructor is called. This sets the length variable of the object to 5.5
+*/
+
+/* /*  /* Note-- If no constructor is defined in our class, then the C++ compiler will automatically create a default constructor with an empty code and no parameters.
+
+*/ 
+```
+   - <b>Parameterized Constructors
+</b> - Parameterized Constructors are  constructor with parameters .
+
+### EXAMPLE
+```
+// C++ program to calculate the area of a wall
+
+#include <iostream>
+using namespace std;
+
+// declare a class
+class Wall {
+  private:
+    double length;
+    double height;
+
+  public:
+    // parameterized constructor to initialize variables
+    Wall(double len, double hgt) {
+      length = len;
+      height = hgt;
+    }
+
+    double calculateArea() {
+      return length * height;
+    }
+};
+
+int main() {
+  // create object and initialize data members
+  Wall wall1(10.5, 8.6);
+  Wall wall2(8.5, 6.3);
+
+  cout << "Area of Wall 1: " << wall1.calculateArea() << endl;
+  cout << "Area of Wall 2: " << wall2.calculateArea();
+
+  return 0;
+}
+```
+   - <b>Copy Constructor</b> - Copy constructor  is used to copy data of one object to another.They are also used to run a default code when an object is created.
+
+### EXAMPLE 
+```cpp
+#include <iostream>
+using namespace std;
+
+// declare a class
+class Wall {
+  private:
+    double length;
+    double height;
+
+  public:
+
+    // initialize variables with parameterized constructor
+    Wall(double len, double hgt) {
+      length = len;
+      height = hgt;
+    }
+
+    // copy constructor with a Wall object as parameter
+    // copies data of the obj parameter
+    Wall(Wall &obj) {
+      length = obj.length;
+      height = obj.height;
+    }
+
+    double calculateArea() {
+      return length * height;
+    }
+};
+
+int main() {
+  // create an object of Wall class
+  Wall wall1(10.5, 8.6);
+
+  // copy contents of wall1 to wall2
+  Wall wall2 = wall1;
+
+  // print areas of wall1 and wall2
+  cout << "Area of Wall 1: " << wall1.calculateArea() << endl;
+  cout << "Area of Wall 2: " << wall2.calculateArea();
+
+  return 0;
+}
+
+```
+
 ## 3. ACCESS MODIFIERS IN C++.
-   - <b>ACCESS MODIFIERS </b> -  Access modifiers are used to set boundaries for availability of members of class it can be  it's data members or member functions.You can use either one, two or all 3 modifiers in the same class to set different boundaries for different class members. 
+- <b>ACCESS MODIFIERS </b> -  Access modifiers are used to set boundaries for availability of members of class it can be  it's data members or member functions.You can use either one, two or all 3 modifiers in the same class to set different boundaries for different class members. 
    #### There are 3  ACCESS MODIFIERS in c++.
 
 

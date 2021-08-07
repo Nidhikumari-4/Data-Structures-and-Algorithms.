@@ -26,7 +26,7 @@ class_name(parameter1, parameter2, ...)
     // constructor Definition 
 }
 ```
-### EXAMPLE
+ EXAMPLE
 ```cpp
 #include <iostream>
 using namespace std;
@@ -58,9 +58,9 @@ int main() {
 */ 
 ```
    -   <b>Parameterized Constructors
-</b> Parameterized Constructors are  constructor with parameters .
+</b> - Parameterized Constructors are  constructor with parameters .
 
-### EXAMPLE
+ EXAMPLE
 ```cpp
 #include <iostream>
 using namespace std;
@@ -96,7 +96,7 @@ int main() {
 ```
    -   <b>Copy Constructor</b> - Copy constructor  is used to copy data of one object to another.They are also used to run a default code when an object is created.
 
-### EXAMPLE 
+ EXAMPLE 
 ```cpp
 #include <iostream>
 using namespace std;

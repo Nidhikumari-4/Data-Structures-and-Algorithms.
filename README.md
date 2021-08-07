@@ -32,7 +32,8 @@
     void display();   // Member Function decaration
 }
 ```
-<b>The private Members</b> - "Private" means personal that belongs to no one. So  no one can access the class members declared private, outside that class. If someone tries to access the private members of a class, they will get a compile time error. By default class variables and member functions are private.
+   - <b>The private Members</b> - "Private" means personal that belongs to no one. So  no one can access the class members declared private, outside that class. If someone tries to access the private members of a class, they will get a compile time error. By default class variables and member functions are private.
+
 ```cpp
 class PrivateAccess
 {
@@ -42,9 +43,10 @@ class PrivateAccess
     void display();   // Member Function decaration
 }
 ```
-<b>The Protected Member</b> - "Protected" means to protect,preserve someone or something. Protected is similar to private, it makes class member inaccessible outside the class. But they can be accessed by any subclass of that class. (If class A is inherited by class B, then class B is subclass of class A.)We will learn it more in INHERITANCE .
-```cpp
-class ProtectedAccess
+
+   - <b>The Protected Member</b> - "Protected" means to protect,preserve someone or something. Protected is similar to private, it makes class member inaccessible outside the class. But they can be accessed by any subclass of that class. (If class A is inherited by class B, then class B is subclass of class A.)We will learn it more in INHERITANCE .
+   ```cpp
+   class ProtectedAccess
 {
     // protected access modifier
     protected: 
@@ -52,4 +54,3 @@ class ProtectedAccess
     void display();   // Member Function decaration
 }
 ```
-

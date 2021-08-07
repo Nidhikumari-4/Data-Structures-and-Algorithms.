@@ -674,9 +674,9 @@ int main(){
 
 ## 9. [FRIEND FUNCTION](https://youtu.be/DHVo9hvcQMI)
 
-## 10. [Call By Value](https://youtu.be/HEiPxjVR8CU)
+## 10. [Call By Value](https://youtu.be/-NS3KfrSvU8)
 
-## 11. [Call By Reference](https://youtu.be/HEiPxjVR8CU)
+## 11. [Call By Reference](https://youtu.be/-NS3KfrSvU8)
 
 ## 12. [Virtual Function](https://youtu.be/DHVo9hvcQMI)
 

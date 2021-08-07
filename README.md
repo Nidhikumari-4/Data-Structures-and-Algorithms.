@@ -2,19 +2,19 @@
 
 ## Data Structures :-
 
-### Data Structures is a way of storing/organising data in the memory, in such a way that access, management and modification become efficient.
+#### Data Structures is a way of storing/organising data in the memory, in such a way that access, management and modification become efficient.
 
 ## Algorithms :-
 
-### Algorithms is any approach you use to perform operations on data (like searching, sorting, traversing, ..Etc.).
+#### Algorithms is any approach you use to perform operations on data (like searching, sorting, traversing, ..Etc.).
 
 
 # Prerequisites :-
 
 ## 0. PROGRAMMING LANGUAGE. 
 ## 1. [CLASS AND OBJECTS.](https://youtu.be/DHVo9hvcQMI) 
-   - <b>CLASS</B> - Classes are type of gropus in which two things come variables and functions.
-   - <b>OBJECT</b> - These are individual instant/entity of the class that has some characheristics and behaviours.
+   ### <b>CLASS</B> - Classes are type of gropus in which two things come variables and functions.
+   ### <b>OBJECT</b> - These are individual instant/entity of the class that has some characheristics and behaviours.
 
    ```cpp
    #include<iostream>

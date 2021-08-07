@@ -500,8 +500,8 @@ int main() {
 
 -  Polymorphism is a feature of OOPs that allows the object to behave differently in different conditions. In C++ we have two types of polymorphism:
 
-1.Compile Time(Function overloading)
-2.Run Time (Function Overrriding)
+1. Compile Time(Function overloading) 
+2. Run Time (Function Overrriding)
 
 ```cpp
 // (Function Overloading)

@@ -62,12 +62,11 @@ int main ()
     return 0;
 }
 ```
-## 2. [CONSTRUCTOR.](https://youtu.be/DHVo9hvcQMI)
-   - <b>Constructor</b> - Constructor has no return type not even void.
+## 2. [CONSTRUCTOR.](https://youtu.be/DHVo9hvcQMI) - </b> Constructor has no return type not even void.
    
  
- ####  <b>There are 3 Types of Constructors in C++</b>
-   -   <b>DEFAULT CONSTRUCTOR</b> - Default constructor is the constructor which doesn't take any argument. It has no parameter.
+ ###  <b>There are 3 Types of Constructors in C++</b>
+   ###    <b>DEFAULT CONSTRUCTOR</b> - Default constructor is the constructor which doesn't take any argument. It has no parameter.
 
 ```cpp
 class_name(parameter1, parameter2, ...)
@@ -105,8 +104,7 @@ int main() {
 
 */ 
 ```
-   -   <b>PARAMETERIZED CONSTRUCTOR
-</b> - Parameterized Constructors are  constructor with parameters .
+   ### <b>PARAMETERIZED CONSTRUCTOR</b> -  Parameterized Constructors are  constructor with parameters .
 
 ```cpp
 #include <iostream>
@@ -141,7 +139,7 @@ int main() {
   return 0;
 }
 ```
-   -   <b>COPY CONSTRUCTOR</b> - Copy constructor  is used to copy data of one object to another.They are also used to run a default code when an object is created.
+  ###   <b>COPY CONSTRUCTOR</b> - Copy constructor  is used to copy data of one object to another.They are also used to run a default code when an object is created.
 
 ```cpp
 #include <iostream>

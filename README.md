@@ -7,3 +7,10 @@
 ## Algorithms :-
 
 ### Algorithms is any approach you use to perform operations on data (like searching, sorting, traversing, ..Etc.).
+
+
+# Prerequisites :-
+
+0. PROGRAMMING LANGUAGE. 
+1. [CLASS AND OBJECTS](https://youtu.be/DHVo9hvcQMI) 
+2. 

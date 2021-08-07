@@ -15,7 +15,56 @@
 ## 1. [CLASS AND OBJECTS.](https://youtu.be/DHVo9hvcQMI) 
    - <b>CLASS</B> - Classes are type of gropus in which two things come variables and functions.
    - <b>OBJECT</b> - These are individual instant/entity of the class that has some characheristics and behaviours.
+
+   ```cpp
+   #include<iostream>
+
+using namespace std; // this is namespace
+
+class car
+{
+    char color[10];
+    public:
+    int speed;
+
+    public:
+    void getdata(int distance, int fuel)
+    {
+        cout<<"The car has covered "<< distance << " km and has consumed " << fuel <<"L fule\n";
+    }
+
+    void mileage(float distance, float fuel);
+
+    void carspeed()
+    {
+        cout<<"The car speed is" << speed <<"\n";
+    }
+
+} audi;
+
+void car :: mileage(float d, float f)
+{
+    float carmileage = d/f;
+    cout<<"The car mileage is " << carmileage <<"\n";
+}
+
+int main ()
+{
+    car swift;
+
+    // swift.getdata(130, 7);
+    // audi.getdata(150,25);
+    // swift.mileage(130,7);
+
+    swift.speed = 50;
+    swift.carspeed();
+
+    return 0;
+}
+```
 ## 2. [CONSTRUCTOR.](https://youtu.be/DHVo9hvcQMI)
+   - <b>Constructor</b> - Constructor has no return type not even void.
+   
  
  ###  <b>There are 3 Types of Constructors in C++</b>
    -   <b>Default Constructor</b> - Default constructor is the constructor which doesn't take any argument. It has no parameter.
@@ -139,8 +188,49 @@ int main() {
 }
 
 ```
-
-## 3. ACCESS MODIFIERS IN C++.
+## 4. DESTRUCTORS
+   - When are Destructor called ?
+      - It is automatically called when program finish execution and when a scope(the {} parenthesis) containing local variables end.
+   - It is a function similar to other ordinary function used to destroy or de allocate the memory block that has already been allocated by constructor.
+      - It can have return type even void.
+      - It cannot be overloaded.
+      - It is automatically invoked or called when the life of object gets over or get out of scope.
+      - Must have same value as the class
+      - Symbol(~)
+```cpp
+~class_name()    
+{   
+   //Some code   
+}
+```
+```cpp
+#include <iostream>
+using namespace std;
+class HelloWorld{
+public:
+  //Constructor
+  HelloWorld(){
+    cout<<"Constructor is called"<<endl;
+  }
+  //Destructor
+  ~HelloWorld(){
+    cout<<"Destructor is called"<<endl;
+   }
+   //Member function
+   void display(){
+     cout<<"Hello World!"<<endl;
+   }
+};
+int main(){
+   //Object created
+   HelloWorld obj;
+   //Member function called
+   obj.display();
+   return 0;
+}
+```
+   
+   ## 3. ACCESS MODIFIERS IN C++.
 - <b>ACCESS MODIFIERS </b> -  Access modifiers are used to set boundaries for availability of members of class it can be  it's data members or member functions.You can use either one, two or all 3 modifiers in the same class to set different boundaries for different class members. 
    #### There are 3  ACCESS MODIFIERS in c++.
 

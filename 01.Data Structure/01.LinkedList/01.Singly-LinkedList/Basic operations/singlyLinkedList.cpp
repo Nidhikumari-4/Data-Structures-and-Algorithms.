@@ -290,7 +290,6 @@ int main()
             Sl.ReverseList();
             break;
         case 8:
-            //int pos,val;
             cout << "Enter pos: ";
             cin >> pos;
             cout << "Enter val: ";

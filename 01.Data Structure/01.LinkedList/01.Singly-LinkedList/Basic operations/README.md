@@ -8,14 +8,7 @@
 ## 6.Delete Node at any Position
 ## 7.Reverse a LinkedList
 
-<img src="1.jpeg">
-<img src="2.jpeg">
-<img src="3.jpeg">
-<img src="4.jpeg">
-<img src="5.jpeg">
-<img src="6.jpeg">
-<img src="7.1.jpeg">
-<img src="7.2.jpeg"> 
+
 
 ![1](https://user-images.githubusercontent.com/77065920/128816217-6d24c17d-591b-4cb9-8a26-9bb4be77e8cb.jpeg)
 ![2](https://user-images.githubusercontent.com/77065920/128816233-a8eb5875-d80c-426b-9ae8-5c5a90366dc3.jpeg)

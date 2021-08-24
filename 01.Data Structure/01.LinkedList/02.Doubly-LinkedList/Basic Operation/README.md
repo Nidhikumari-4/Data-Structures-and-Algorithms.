@@ -10,4 +10,10 @@
 
 
  
- ![1.insert node at first](https://github.com/Nidhikumari-4/DSA-EndGame/blob/main/01.Data%20Structure/01.LinkedList/02.Doubly-LinkedList/Basic%20Operation/1.insert%20node%20at%20first.png)
+ <img src="1.insert node at first.png">
+<img src="2.insert node last.png">
+<img src="3.insert node at pos.png">
+<img src="4.Delete node start.png">
+<img src="5.delete node at last.png">
+<img src="6.Delete node at pos.png">
+<img src="7.Reverse LL.png">

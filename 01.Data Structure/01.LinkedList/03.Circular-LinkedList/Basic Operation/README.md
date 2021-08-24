@@ -1,4 +1,4 @@
-# Some Basic Operations on Doubly-LinkedList:-
+# Some Basic Operations on Circular-LinkedList:-
 
 ## 1.Insert Node at First
 ## 2.Insert Node at Last

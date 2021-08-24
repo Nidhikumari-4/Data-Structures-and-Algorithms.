@@ -19,16 +19,3 @@
 <img src="6.Delete node at pos.jpg">
 <img src="7.Reverse LL.jpg">
 
-![1 insert node at first](https://github.com/Nidhikumari-4/DSA-EndGame/raw/main/01.Data%20Structure/01.LinkedList/02.Doubly-LinkedList/Basic%20Operation/1.insert%20node%20at%20first.jpg)
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()

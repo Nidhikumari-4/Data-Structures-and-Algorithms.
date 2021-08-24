@@ -8,11 +8,11 @@
 ## 6.Delete Node at any Position
 ## 7.Reverse a LinkedList
 
-<img src="C_1.Insert node 1st.JPg">
-<img src="C_2.Insert node at last.JPg">
-<img src="C_3.Insert node at a pos.JPg">
-<img src="C_4.Delete node at first.JPg">
-<img src="C_5.Delete node at last.JPg">
-<img src="C_6.Delete node at pos.JPg">
+<img src="C_1.Insert node 1st.jpg">
+<img src="C_2.Insert node at last.jpg">
+<img src="C_3.Insert node at a pos.jpg">
+<img src="C_4.Delete node at first.jpg">
+<img src="C_5.Delete node at last.jpg">
+<img src="C_6.Delete node at pos.jpg">
 
  

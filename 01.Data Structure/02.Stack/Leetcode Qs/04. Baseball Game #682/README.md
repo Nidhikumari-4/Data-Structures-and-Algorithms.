@@ -1,2 +1,2 @@
 ### Problem Link : [Baseball Game #682](https://leetcode.com/problems/baseball-game/submissions/)
-### Solution: [See my code here in cpp](baseball.cpp)
+### Solution: [Baseball Game #682 solution](baseball.cpp)

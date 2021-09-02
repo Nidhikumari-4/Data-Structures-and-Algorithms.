@@ -24,7 +24,7 @@ public:
             }
             else
             {
-                s.push(stoi(ops[i]));
+                s.push(stoi(ops[i])); // //stoi=string to integer
             }
         }
         while(!s.empty())

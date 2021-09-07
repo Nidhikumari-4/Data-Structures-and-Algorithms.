@@ -2,7 +2,7 @@
 
 ### **Step 2:** [Learn Rules and Visualize pseudocode to convert prefix to postfix using stack](https://youtu.be/CV7jwxSz8cg)
 
-<img src=" rules for prefix to postfix.jpg">
+<img src="rules for prefix to postfix.jpg">
 <img src="pseudocode for  Prefix to Postfix.png ">
 
 ### **Step 3 : (watch if needed)** [Implementation of pseudo code in C++ to convert  prefix to postfix  using stack.](https://youtu.be/qNtfiSSIbsg)

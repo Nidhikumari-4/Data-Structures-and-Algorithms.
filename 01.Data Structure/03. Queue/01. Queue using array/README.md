@@ -23,10 +23,12 @@ Queue is a linear data structure which operates in a **First IN First OUT or Las
 
 <h3> <b>Step 1:</b> <a href="https://youtu.be/fbonDkYsKj0">Watch this introductory video on apna college</a>
 
-<h3><b>Step 2:</b> Visualize pseudocode</h3>
+**Step 2:** [Learn and Visualize pseudocode by Simple snippets.](https://youtu.be/sDO9bPaBg6A)
 
 <h3><img src="pseudocode queue array.png"/></h3>
 
-### **Step 3:** [See my code here in C++](queue_array.cpp)
+### **Step 3:** [Implementation of pseudo code in C++](https://youtu.be/wqKdRQ9nWvs)
+
+### **Step 4:** [See my code here in C++](queue_array.cpp)
 
 <h1 align="Center">Thank You</h1>

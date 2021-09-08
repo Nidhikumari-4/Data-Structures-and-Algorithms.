@@ -21,9 +21,9 @@ Queue is a linear data structure which operates in a **First IN First OUT or Las
 
 <!-- <br> -->
 
-<h3> <b>Step 1:</b> <a href="https://youtu.be/fbonDkYsKj0">Watch this introductory video on apna college</a>
+### **Step 1:** <a href="https://youtu.be/fbonDkYsKj0">Watch this introductory video on apna college</a>
 
-**Step 2:** [Learn and Visualize pseudocode by Simple snippets.](https://youtu.be/sDO9bPaBg6A)
+### **Step 2:** [Learn and Visualize pseudocode by Simple snippets.](https://youtu.be/sDO9bPaBg6A)
 
 <h3><img src="pseudocode queue array.png"/></h3>
 

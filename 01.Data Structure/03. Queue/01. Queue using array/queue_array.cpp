@@ -26,7 +26,7 @@ class Queue {
 
 //isFull() – Check if queue is full or not.
   bool isFull() {
-    if (rear == 4)
+    if (rear == arr[5]-1)
       return true;
     else
       return false;
@@ -50,12 +50,13 @@ class Queue {
 
 //Dequeue() – Remove item from the queue from the FRONT.
   int dequeue() {
-    int x = 0;
+    int x;
     if (isEmpty()) {
       cout << "Queue is Empty" << endl;
-      return x;
+      return 0;
     } else if (rear == front) {
-      x = arr[rear];
+      x = arr[rear]; //or  x = arr[front];
+      arr[rear]=0;  //  or arr[front]=0;
       rear = -1;
       front = -1;
       return x;
@@ -66,6 +67,14 @@ class Queue {
       front++;
       return x;
     }
+  }
+//peek()-return front elemenet in the queue(line).
+  int peek(){
+      if(front==-1 || front>rear){
+          cout<<"No elements in queue"<<endl;
+          return -1;
+      }
+      return arr[front];
   }
 
 //count() – Get number of items in the queue.
@@ -94,8 +103,9 @@ int main() {
     cout << "3. isEmpty()" << endl;
     cout << "4. isFull()" << endl;
     cout << "5. count()" << endl;
-    cout << "6. display()" << endl;
-    cout << "7. Clear Screen" << endl << endl;
+    cout << "6. peek()" << endl;
+    cout << "7. display()" << endl;
+    cout << "8. Clear Screen" << endl << endl;
 
     cin >> option;
 
@@ -126,10 +136,13 @@ int main() {
       cout << "Count Operation \nCount of items in Queue : " << q1.count() << endl;
       break;
     case 6:
+      cout<< "peek operation(return front elemenet in the queue(line).) \nPeek value is: "<<q1.peek()<<endl;
+      break;
+    case 7:
       cout << "Display Function Called - " << endl;
       q1.display();
       break;
-    case 7:
+    case 8:
       system("cls");
       break;
     default:

@@ -74,7 +74,7 @@ public:
 int main()
 {
     Stack_Queue s1;
-    int option, pos, val;
+    int option, val;
 
     do
     {

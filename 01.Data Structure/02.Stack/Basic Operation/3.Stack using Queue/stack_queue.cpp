@@ -84,7 +84,6 @@ int main()
         cout << "3. Pop()" << endl;
         cout << "4. count()" << endl;
         cout << "5. top()" << endl;
-        // cout << "6. updateValue()" << endl;
         cout << "6. display()" << endl;
         cout << "7. Clear Screen" << endl
              << endl;

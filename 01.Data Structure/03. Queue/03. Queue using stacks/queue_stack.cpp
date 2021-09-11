@@ -55,9 +55,9 @@ public:
             
         }
         // return the top item from st2
-        size--;
         int x = st2.top();
         st2.pop();
+        size--;
         return x;
         
     }

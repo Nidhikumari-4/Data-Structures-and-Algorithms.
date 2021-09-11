@@ -63,6 +63,7 @@ class CircularQueue {
       arr[rear]=0;  //  or arr[front]=0;
       rear = -1;
       front = -1;
+      size--;
       return x;
       
     } else {
@@ -70,14 +71,16 @@ class CircularQueue {
       x = arr[front];
       arr[front] = 0;
       front=(front+1)%5;  //(front+1)%n here n=5
+      size--;
       return x;
+     
     }
-    size--;
+    
   }
 
 //peek()-return front elemenet in the queue(line).
   int peek(){
-      if(front==-1 || front>rear){
+      if(isEmpty()){
           cout<<"No elements in queue"<<endl;
           return -1;
       }

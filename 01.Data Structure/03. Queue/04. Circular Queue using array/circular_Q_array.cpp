@@ -4,9 +4,9 @@ using namespace std;
 class CircularQueue {
   private:
     int front;
-  int rear;
-  int size;
-  int arr[5];
+    int rear;
+    int size;
+    int arr[5];
 
   public:
     CircularQueue() {

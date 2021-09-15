@@ -2,8 +2,8 @@
 
 ### **Step 1:** [Learn Rules and Visualize pseudocode to convert prefix to infix  using stack.](https://youtu.be/sevlImM3Onc)
 
-<img src="rules for prefix to infix.jpg ">
-<img src="pseudocode prefix to infix.png">
+![rules for prefix to infix](https://user-images.githubusercontent.com/77065920/133478823-65a3090a-8f3d-4d1f-b3ff-90a93eaffe7d.jpg)
+![pseudocode prefix to infix](https://user-images.githubusercontent.com/77065920/133478811-ad56692a-85fc-4917-86bd-fc226e51313e.png)
 
 ### **Step 2: (watch if needed)** [Implementation of pseudo code in C++ to convert prefix to infix  using stack.](https://youtu.be/Xm-SHxqOzI4)
 

@@ -32,4 +32,4 @@ Kunal Kushwaha](https://youtu.be/M2uO2nMT0Bk?t=108)
 7. In the end,you will come out of the main function.
 8. ####  **Make sure to return   the result of a function and of the value type.**
 
-![](.\recursion.png)
+<img src="recursion.png">

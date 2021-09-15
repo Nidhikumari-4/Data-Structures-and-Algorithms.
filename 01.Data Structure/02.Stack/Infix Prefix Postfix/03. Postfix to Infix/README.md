@@ -4,8 +4,8 @@
 
 ### **Step 1:** [Learn Rules and Visualize pseudocode to convert posfix to infix using stack.](https://youtu.be/OKdMY9oYkTg)
 
-<img src="rule postfix to infix.jpg">
-<img src="pseudo code postfix to  infix.jpg">
+![rule postfix to infix](https://user-images.githubusercontent.com/77065920/133478709-31f8d767-e33e-4116-bfe1-939e3c5f3b4a.jpg)
+![pseudo code postfix to  infix](https://user-images.githubusercontent.com/77065920/133478687-e84e249c-4a68-4032-821e-c0a318a60ae6.jpg)
 
 ### **Step 2: (watch if needed)** [Implementation of pseudo code in C++ to convert postfix to Infix  using stack.](https://youtu.be/0itJnkeq6XY)
 

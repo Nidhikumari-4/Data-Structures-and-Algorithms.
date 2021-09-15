@@ -32,4 +32,4 @@ Kunal Kushwaha](https://youtu.be/M2uO2nMT0Bk?t=108)
 7. In the end,you will come out of the main function.
 8. ####  **Make sure to return   the result of a function and of the value type.**
 
-![rec](https://github.com/Nidhikumari-4/Data-Structures-and-Algorithms./blob/main/02.Algorithm/00.%20Recursions/Recursion/recursion.png?raw=true)
+![recursion](https://user-images.githubusercontent.com/77065920/133477439-726d921e-07e5-4e3d-a35a-e7b8334bac7f.png)

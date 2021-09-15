@@ -4,13 +4,13 @@
 - when a function finishes executing it is removed from stack and the flow of program is over.
 
  ### **What is recursion?**
- - ### In simple words a function that calls itself.
+ - #### In simple words a function that calls itself.
 
  ### **Why do we need recursion?**
- - ### It helps us in solving bigger/complex problems in simple way.
- - ### You can convert recursion solutions into iteration(loops) and vice versa.
-- ### Space complexity is not constant because of recursion calls. 
-- ### Helps us in breaking down bigger problems into smaller problems.
+ - #### It helps us in solving bigger/complex problems in simple way.
+ - #### You can convert recursion solutions into iteration(loops) and vice versa.
+- #### Space complexity is not constant because of recursion calls. 
+- #### Helps us in breaking down bigger problems into smaller problems.
 
  ### Video Reference
  - [Introduction to Recursion BY 

@@ -6,11 +6,11 @@
 
 ### **Step 4:** [Learn Rules to convert Infix to postfix using stack.](https://youtu.be/8wQ7JE5pFXU)
 
-<img src="rule-infix to postfix using stack.jpg">
+![pseudo code- Infix to postfix using stack](https://user-images.githubusercontent.com/77065920/133477844-e14b31ea-fb73-48cb-aa00-2bf74bdde135.png)
 
 ### **Step 5:** [Visualize pseudo code to convert Infix to postfix using stack.](https://youtu.be/BeRM6DzdCBg)
 
-<img src="pseudo code- Infix to postfix using stack..png">
+![rule-infix to postfix using stack](https://user-images.githubusercontent.com/77065920/133477866-1645b781-eaff-4e0f-b080-554056775f9b.jpg)
 
 ### **Step 6:** [Implementation of pseudo code in C++ to convert Infix to postfix using stack.](https://youtu.be/dJESbyFR1sU)
 

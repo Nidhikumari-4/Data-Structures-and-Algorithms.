@@ -2,9 +2,8 @@
 
 ### **Step 2:** [Learn Rules and Visualize pseudocode to convert Postfix to Prefix using stack.](https://youtu.be/4GTqpV_dqKY)
 
-
-<img src="rules postfix to prefix.jpg ">
-<img src="pseudocode for postfix to prefix.jpg ">
+![rules postfix to prefix](https://user-images.githubusercontent.com/77065920/133478915-e4bc8441-b447-4ef8-9809-5e2e7a224840.jpg)
+![pseudocode for postfix to prefix](https://user-images.githubusercontent.com/77065920/133478893-69827f2d-9f60-4b64-9484-f18c628a7d74.jpg)
 
 ### **Step 3: (watch if needed)** [Implementation of pseudo code in C++ to convert postfix to prefix  using stack.](https://youtu.be/Vpt4PjDUaH8)
 

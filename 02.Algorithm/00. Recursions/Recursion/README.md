@@ -12,12 +12,6 @@
 - #### Space complexity is not constant because of recursion calls. 
 - #### Helps us in breaking down bigger problems into smaller problems.
 
- ### Video Reference
- - [Introduction to Recursion BY 
-Kunal Kushwaha](https://youtu.be/M2uO2nMT0Bk?t=108)
-
-- [Visualize Recursion by Kunal Kushwaha ](https://youtu.be/M2uO2nMT0Bk?t=3049)
-
 ### **How to understand & approach a problem ?**
 1.  Identify if you can break down problem into smaller problems .
 2. Write the recurance relation if needed.
@@ -30,6 +24,58 @@ Kunal Kushwaha](https://youtu.be/M2uO2nMT0Bk?t=108)
 5. See how the values & what type of values(int,string,etc.) are returned  at each step.
 6. See where the function call will come out.
 7. In the end,you will come out of the main function.
-8. ####  **Make sure to return   the result of a function and of the value type.**
+8.Make sure to return   the result of a function and of the value type.
 
-![recursion](https://user-images.githubusercontent.com/77065920/133477439-726d921e-07e5-4e3d-a35a-e7b8334bac7f.png)
+```cpp
+/* Calculate the factorial of a nimber.
+ factorial of 5: 5*4*3*2*1=120 
+ 
+ 1. Divide the problem into smaller sub problem.
+
+ Calulate fact(4)
+ Fact(1)=1
+ Fact(2) = 2*1 = 2*fact(1)
+ Fact(3) = 3*2*1 = 3*fact(2)
+ Fact(4) = 4*3*2*1 = 4*fact(3)
+
+ Fact(n) = n * Fact(n-1)
+
+ 2. Specify the base codition to stop recursion.
+ */
+
+#include<iostream>
+using namespace std;
+
+int fact(int n){
+    if(n==1)
+    return 1;
+    else
+    return n*fact(n-1);
+}
+
+int main(){
+    int n;
+    cout<<"Enter the number: ";
+    cin>>n;
+    cout<<"Factorial of a number "<< n <<" is "<< fact(n);
+    return 0;
+}
+
+/*
+fact(5) // 120 
+   |
+   5*fact(4) // 5*24=120
+        |
+      4*fact(3) // 4*6=24
+           |
+          3*fact(2) // 3*2=6
+               |
+             2*fact(1) // 2*1=2
+                  |
+                 return 1 // 1
+```
+
+
+### Video Reference
+ - [Recursion BY Neso Academy 
+](https://www.youtube.com/playlist?list=PLBlnK6fEyqRjTO_UNGKuaaoxEqvSF0t5h)

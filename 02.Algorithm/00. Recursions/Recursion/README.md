@@ -24,7 +24,7 @@
 5. See how the values & what type of values(int,string,etc.) are returned  at each step.
 6. See where the function call will come out.
 7. In the end,you will come out of the main function.
-8.Make sure to return   the result of a function and of the value type.
+8. Make sure to return   the result of a function and of the value type.
 
 ```cpp
 /* Calculate the factorial of a nimber.
@@ -72,10 +72,5 @@ fact(5) // 120
                |
              2*fact(1) // 2*1=2
                   |
-                 return 1 // 1
+                 return 1  // 1
 ```
-
-
-### Video Reference
- - [Recursion BY Neso Academy 
-](https://www.youtube.com/playlist?list=PLBlnK6fEyqRjTO_UNGKuaaoxEqvSF0t5h)

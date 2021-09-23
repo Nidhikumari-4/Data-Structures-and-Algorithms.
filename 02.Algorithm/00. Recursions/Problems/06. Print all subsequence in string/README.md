@@ -1,5 +1,5 @@
 
-<<<<<<< Updated upstream
+
 ## [Print all subsequences of a string - GFG](https://www.geeksforgeeks.org/print-subsequences-string/)
 
 ```cpp
@@ -30,6 +30,4 @@ int main()
     return 0;
 }
 ```
-=======
-## [Print all subsequences of a string - GFG](https://www.geeksforgeeks.org/print-subsequences-string/)
->>>>>>> Stashed changes
+

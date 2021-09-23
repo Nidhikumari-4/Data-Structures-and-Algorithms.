@@ -11,7 +11,8 @@ public:
     int b = fib(n - 2);
     return a + b;
     }
-int main(){
+int main()
+{
     int n;
     cout << "Enter a number: ";
     cin >> n;

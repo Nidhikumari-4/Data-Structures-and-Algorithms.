@@ -10,8 +10,10 @@ void Subsequence(string s, string ans)
         cout << ans << endl;
         return;
     }
-    string ros=s.substr(1); //ros=rest of string
+    //pick
     char ch=s[0];
+    //non pick
+    string ros=s.substr(1); //ros=rest of string
     Subsequence(ros,ans);
     Subsequence(ros,ans+ch);
 }

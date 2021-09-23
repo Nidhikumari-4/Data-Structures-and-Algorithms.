@@ -5,14 +5,13 @@ using namespace std;
 
 void Subsequence(string s, string ans)
 {
-    // if input is empty print the output string
     if (s.length()==0) {
         cout << ans << endl;
         return;
     }
     //pick
     char ch=s[0];
-    //non pick
+    //not pick
     string ros=s.substr(1); //ros=rest of string
     Subsequence(ros,ans);
     Subsequence(ros,ans+ch);

@@ -13,6 +13,7 @@ void Subsequence(string s, string ans)
     char ch=s[0];
     //not pick
     string ros=s.substr(1); //ros=rest of string
+    
     Subsequence(ros,ans);
     Subsequence(ros,ans+ch);
 }

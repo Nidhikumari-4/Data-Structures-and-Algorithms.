@@ -36,7 +36,7 @@ int main()
 using namespace std;
 
 int k=3;
-void Subset(int ind,vector<int> ns,int sum,int arr[],int n)
+void Subset(int ind,vector<int> &ns,int sum,int arr[],int n)
 {
     if (ind==n ) {
         if (sum %k == 0 && ns.size()!=0){

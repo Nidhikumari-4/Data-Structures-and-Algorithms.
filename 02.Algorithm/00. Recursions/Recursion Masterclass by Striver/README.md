@@ -176,6 +176,7 @@ int main(){
 #### Note: You can't declare globally nor internally a count variable and use it as a counter.
 - Example : arr[]={3,6} k=3 
 ```cpp
+**
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -253,4 +254,81 @@ public:
     }
 };
 ```
-# [**LECTURE-3**]()
+# [**LECTURE-3**](https://youtu.be/uisK9EJQcaY)
+
+## Print the subsequence whose sum=k repetation allowed.
+- For Examples: arr={1,2,3} 
+  #### sum=4
+  ####   {1,1,1,1}, {1,3}, {1,1,2}, {2,2}.
+- Hint: when you pick we don't go to next Index.
+
+```cpp
+**
+#include<iostream>
+using namespace std;
+
+int countF(int ind,int sum,int arr[],int n){
+    if(sum==0)
+      return 1;
+    if(ind==n){
+        if(sum==0){
+            return 1;
+        }
+        return 0;
+    }
+    int left=0;
+    int right=0;
+
+    //pick
+    //when can you pick a particular element
+    if(arr[ind]<=sum){
+        //sum will decrease
+        sum-=arr[ind];
+        left=countF(ind,sum,arr,n);
+        // restore sum
+        sum+=arr[ind];
+    }
+    //not pick means move to next INDEX
+    right=countF(ind+1,sum,arr,n);
+    return left+right;
+}
+
+int main()
+{
+    int ind,sum=4,n;
+    int arr[3]={1,2,3};
+    n = sizeof(arr) / sizeof(arr[0]);
+    countF(ind,sum,arr,n);
+    return 0;
+}
+```
+## Print all the paths in Matrix 
+
+```cpp
+#include<iostream>
+using namespace std;
+
+int m,n;
+void findPath(int i,int j,string s){
+    if(i>=n||j>=m) 
+       return;
+    if(i==n-1&&j==m-1){
+        cout<<s<<endl;
+        return;
+    }
+    //down
+    s+='D';
+    findPath(i+1,j,s);
+    s.pop_back();
+    //right
+    s+='R';
+    findPath(i,j+1,s);
+    s.pop_back();
+}
+int main()
+{
+    cin>>m>>n;
+    findPath(0,0," ");
+    return 0;
+}
+```

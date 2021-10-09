@@ -105,7 +105,7 @@ int main(){
     return 0;
 }
 ```
-# [**LECTURE-2**]()
+# [**LECTURE-2**](https://youtu.be/QbDAWmuOn5Y)
 ## [Print all subsequences of a string - GFG](https://www.geeksforgeeks.org/print-subsequences-string/)
 
 ```cpp

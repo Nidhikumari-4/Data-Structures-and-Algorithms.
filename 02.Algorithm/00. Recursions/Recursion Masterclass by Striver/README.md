@@ -303,7 +303,7 @@ int main()
 }
 ```
 ## Print all the paths in Matrix 
-
+- 2 directions LEFT , RIGHT 
 ```cpp
 #include<iostream>
 using namespace std;
@@ -329,6 +329,116 @@ int main()
 {
     cin>>m>>n;
     findPath(0,0," ");
+    return 0;
+}
+```
+## Print all the paths in Matrx
+#### **NOTE** - In a path, no cell can be visited more than one time
+- Same as above ques only the difference is here we have taken 4 directions
+- LEFT , RIGHT , UP , DOWN
+
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int m,n;
+void findPath(int i,int j,string s,vector<vector<int>> &vis){
+    if(i>=n || j>=m || i<0 || j<0 || vis[i][j]==1) 
+       return;
+    if(i==n-1 && j==m-1){
+        cout<<s<<endl;
+        return;
+    }
+    vis[i][j]=1;
+
+    //down
+    s+='D';
+    findPath(i+1,j,s,vis);
+    s.pop_back();
+    //right
+    s+='R';
+    findPath(i,j+1,s,vis);
+    s.pop_back();
+    //up
+    s+='U';
+    findPath(i-1,j,s,vis);
+    s.pop_back();
+    //left
+    s+='L';
+    findPath(i,j-1,s,vis);
+    s.pop_back();
+
+    vis[i][j]=0;
+}
+int main(){
+    cin>>m>>n;
+    vector<vector<int>>vis(n, vector<int>(m,0));
+    findPath(0,0," ",vis);
+    return 0;
+}
+```
+## Little optimized Sol of above Ques
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string dir="DRUL";
+int di[]={1,0,-1,0};
+int dj[]={0,1,0,-1};
+int m,n;
+void findPath(int i,int j,string s,vector<vector<int>> &vis){
+    if(i>=n || j>=m || i<0 || j<0 || vis[i][j]==1) 
+       return;
+    if(i==n-1 && j==m-1){
+        cout<<s<<endl;
+        return;
+    }
+    vis[i][j]=1;
+
+    for(int x=0;x<4;x++){
+        s+=dir[x];
+        findPath(i+di[x],j+dj[x],s,vis);
+        s.pop_back();
+    }
+    vis[i][j]=0;
+}
+int main(){
+    cin>>m>>n;
+    vector<vector<int>>vis(n, vector<int>(m,0));
+    findPath(0,0," ",vis);
+    return 0;
+}
+```
+## Count paths
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+string dir="DRUL";
+int di[]={1,0,-1,0};
+int dj[]={0,1,0,-1};
+int m,n;
+int findPath(int i,int j,string s,vector<vector<int>> &vis){
+    if(i>=n || j>=m || i<0 || j<0 || vis[i][j]==1 ) 
+       return 0;
+    if(i==n-1 && j==m-1){
+        return 1;
+    }
+    vis[i][j]=1;
+    int count=0;
+    for(int x=0;x<4;x++)
+    {
+        count+=findPath(i+di[x],j+dj[x],s,vis);
+    }
+    vis[i][j]=0;
+    return count;
+    cout<<count;
+}
+int main(){
+    cin>>m>>n;
+    vector<vector<int>>vis(n, vector<int>(m,0));
+    cout<<findPath(0,0," ",vis);
     return 0;
 }
 ```

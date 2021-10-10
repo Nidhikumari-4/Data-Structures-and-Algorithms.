@@ -433,7 +433,6 @@ int findPath(int i,int j,string s,vector<vector<int>> &vis){
     }
     vis[i][j]=0;
     return count;
-    cout<<count;
 }
 int main(){
     cin>>m>>n;

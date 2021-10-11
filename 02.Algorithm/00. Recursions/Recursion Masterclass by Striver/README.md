@@ -257,10 +257,11 @@ public:
 # [**LECTURE-3**](https://youtu.be/uisK9EJQcaY)
 
 ## Print the subsequence whose sum=k repetation allowed.
+#### **Note** - when you pick we don't go to next Index.
 - For Examples: arr={1,2,3} 
-  #### sum=4
-  ####   {1,1,1,1}, {1,3}, {1,1,2}, {2,2}.
-- Hint: when you pick we don't go to next Index.
+- sum=4
+- {1,1,1,1}, {1,3}, {1,1,2}, {2,2}.
+
 
 ```cpp
 **
@@ -438,6 +439,131 @@ int main(){
     cin>>m>>n;
     vector<vector<int>>vis(n, vector<int>(m,0));
     cout<<findPath(0,0," ",vis);
+    return 0;
+}
+```
+# [**LECTURE-4**](https://youtu.be/r9af_mSpBLo)
+## Print only one subsequences whose sum is divisible by K.
+``` cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int k=3;
+bool Subset(int ind,vector<int> &ns,int sum,int arr[],int n)
+{
+    if (ind==n ) {
+        if (sum %k == 0 && ns.size()!=0){
+            for (auto x : ns){
+                cout << x << " ";
+                cout << endl;
+       }
+        return true;
+    }
+    return false;
+    }
+   ns.push_back(arr[ind]);
+   sum+=arr[ind];
+   // pick
+   if(Subset(ind+1,ns,sum,arr,n)==true)
+   {
+       return true;
+   }
+   ns.pop_back();
+    sum-=arr[ind];
+    // not pick
+    if(Subset(ind+1,ns,sum,arr,n)==true){
+        return true;
+    }
+}
+int main(){
+    int ind,sum=0;
+    vector<int> ns;
+    int arr[]={4,3,2};
+    int n = sizeof(arr) / sizeof(arr[0]);
+   Subset(ind,ns,sum,arr,n);
+    return 0;
+}
+```
+## N Queens This will print only one valid Nqueen - Approach 1
+```cpp
+int n;
+bool isSafe(int row, int col, vector<vector<int>>&mat){
+
+    //up digonal i--,j--
+     for(int i=row,j=col; i>=0 && j>=0; i--,j--){
+        if(mat[i][j]==1) return false;
+    }
+    // left i,j--
+    for(int i=row,j=col; i>=0 && j>=0; j--){
+         if(mat[i][j]==1) return false;
+    }
+    // down digonal i++, j-- 
+    for(int i=row,j=col; i<n && j>=0; i++,j--){
+        if(mat[i][j]==1) return false;
+    }
+    return true;
+}
+bool nQueens(int col, vector<vector<int>>&mat){
+    if(col==n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                cout<<mat[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        return true;
+    }
+    for(int row=0; row<n; row++){
+        if(isSafe(row,col,mat)){
+            mat[row][col]=1;
+            if(nQueens(col+1,mat)==true) return true;
+            mat[row][col]=0;
+        }
+    }
+    return false;
+}
+```
+## N Queens This will print only one valid Nqueen - Approach 2
+###  Here we have optimised isSafe() method instead of ittirating.We made 3 arrays to hash left, upLeftDigonal, downLeftDigonal so TC of isSafe() turns to O(1).
+```cpp
+int n;
+bool isSafe(int row, int col, vector<vector<int>>&mat, vector<vector<int>>&rowHash, vector<vector<int>>&thirdHash, vector<vector<int>>&firstHash){
+
+      if(rowHash[row]==1 || thirdHash[row+col]==1 || firstHash[n-1+row-col]==1 )  return false;
+      return true;            
+}
+bool nQueens(int col, vector<vector<int>>&mat, vector<vector<int>>&rowHash, vector<vector<int>>&thirdHash, vector<vector<int>>&firstHash){
+    if(col==n){
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                cout<<mat[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        return true;
+    }
+    for(int row=0; row<n; row++){
+        if(isSafe(row,col,mat,rowHash,thirdHash,firstHash)){
+            mat[row][col]=1;
+            rowHash[row]=1; // left 
+            thirdHash[row+col]=1; //down left Diagonal 
+            firstHash[n-1+row-col]=1; // upper left diagonal
+        if(nQueens(col+1,mat,rowHash,thirdHash,firstHash)==true) return true;
+            mat[row][col]=0; 
+            rowHash[row]=0;//not taken
+            thirdHash[row+col]=0;
+            firstHash[n-1+row-col]=0;
+        }
+    }
+    return false;
+}
+int main(){
+    cin>>n;
+    vector<vector<int>> mat(n,vector<int>(n,0));
+    vector<vector<int>> rowHash(n,0);    
+    vector<vector<int>> thirdHash(2*n-1,0);
+    vector<vector<int>> firstHash(2*n-1,0);
+    nQueens(0,mat, rowHash,thirdHash,firstHash);
     return 0;
 }
 ```

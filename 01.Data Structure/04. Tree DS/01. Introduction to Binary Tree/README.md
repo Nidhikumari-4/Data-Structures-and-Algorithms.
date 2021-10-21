@@ -1,6 +1,9 @@
 # **TREE**
 A tree is a non linear data structure that simulates a hierarchical tree structure with a root value and sub trees of children with parent node, represented as set of linked nodes.
 
+![](https://cdn.shortpixel.ai/client/to_avif,q_glossy,ret_img,w_954/https://simplesnippets.tech/wp-content/uploads/2020/10/real-world-tree-diagram.png)
+
+
 ## **TREE TERMS :-**
 
 1. **Root** – Root is a special node in a tree. The entire tree is referenced through it. It does not have a parent.

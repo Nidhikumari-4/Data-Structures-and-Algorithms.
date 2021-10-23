@@ -84,8 +84,7 @@ class Node{
 };
 
 ```
-## **1 - Insert a Node (Iterative Approach)**
-<hr>
+## **1 - Insert a Node (Iterative Approach)*
 
 ## **[Video Reference](https://youtu.be/6U4K-7fu_4A)**
 <br>

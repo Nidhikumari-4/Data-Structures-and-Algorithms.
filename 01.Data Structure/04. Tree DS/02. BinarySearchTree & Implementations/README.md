@@ -79,10 +79,62 @@ class Node{
     } else 
       return false;
     }
-    
+
     // all above functions like insertion, deletion, printing, traversing will be here
 };
 
 ```
+## **1 - Insert a Node (Iterative Approach)**
+<hr>
+
+## **[Video Reference](https://youtu.be/6U4K-7fu_4A)**
+<br>
+
+![](https://i.ibb.co/Z8j9KS4/Insertion-Pseudocode.png)
+
+```cpp
+// _______START	 1  - Insert a Node(Iterative Approach)_______
+    void insertNodeITTE(int data){
+        Node* n=new Node(data);
+        if(isTreeEmpty()){
+            root=n;
+            cout<<"Value Inserted as root Node";
+        }
+        else{
+            Node* temp=root;
+            while(temp!=NULL){
+                // check if the value already exists at the current node
+                if(n->data==temp->data){
+                    cout<<"Value already exists";
+                    return;
+                }
+                // to insert in the left position
+                else if(n->data<temp->data&&temp->left==NULL){
+                    temp->left=n;
+                    cout<<"Value inserted to left";
+                    break;
+                }
+                // to traverse to the left node
+                else if(n->data<temp->data){
+                    temp=temp->left;
+                }
+    			// to insert in the right position            
+                else if(n->data>temp->data&&temp->right==NULL){
+                    temp->right=n;
+                    cout<<"Value inserted to right";
+                    break;
+                }
+                // to traverse to the right node
+                else{
+                    temp=temp->right;
+                }
+            }
+        }
+    }
+    // _______END 1 - Insert a Node(Iterative Approach)_______
+```
+<hr>
+
+
 
 

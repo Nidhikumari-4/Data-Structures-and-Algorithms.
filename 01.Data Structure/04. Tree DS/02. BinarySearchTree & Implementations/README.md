@@ -134,6 +134,43 @@ class Node{
 ```
 <hr>
 
+## **2 - Insert a Node(Recursive Approach)**
 
+## **[Video Reference](https://youtu.be/x6t1lKzjGhY)**
 
+![](https://i.ibb.co/vcbxQjB/bst-insert-recursive.png)
+
+```cpp
+    //Main fun calling
+    case 2:
+            cout<<"Enter Value : ";
+            cin>>val;
+            n->data=val;
+            bt.insertRecursive(bt.root,val);
+            break;
+
+   // START	2  - Insert a Node(Recursive Approach)
+    Node* insertRecursive(Node* root, int val){
+        //Node* n=new Node(val);
+        // if the root is null, create a new node and return it
+        if(root==NULL){
+          return new Node(val);
+        }
+ 		// if the value is less than the root node then recur for the left subtree
+       if(val<root->data){
+           root->left = insertRecursive(root->left, val);
+       }
+       // if the value is less than the root node then recur for the right subtree
+       else if(val>root->data){
+           root->right=insertRecursive(root->right,val);
+       }
+       else{
+           cout << "No duplicate values allowed!" << endl;
+       }
+       return root;
+    }
+    // END 2 - Insert a Node(Recursive Approach)
+```
+
+<hr>
 

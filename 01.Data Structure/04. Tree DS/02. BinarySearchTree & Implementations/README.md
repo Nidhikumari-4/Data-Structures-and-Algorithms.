@@ -174,3 +174,45 @@ class Node{
 
 <hr>
 
+## **3 - Insert a Node(Level Order Insertion)**
+
+## **[Video Reference](https://youtu.be/kjmBjhalENI)**
+
+```cpp
+//START 3 - Insert a Node(Level Order Insertion)
+    void insertLevelOrder(Node* rt, int val){
+        Node* nn=new Node(val);
+        if(rt==NULL){
+            rt=nn;
+            cout<<"Value Inserted as root Node"<<endl;;
+            root=rt;
+            return ;   
+        }
+        queue<Node*> Q;
+        Q.push(rt);
+
+        while(!Q.empty()){
+            Node* n=Q.front();
+            Q.pop();
+
+            if(n->left==NULL){
+                n->left=nn;
+                cout<<"Value inserted at the left."<<endl;
+                root=rt;
+                return;
+            } else if(n->right==NULL){
+                n->right=nn;
+                cout<<"Value inserted at the right."<<endl;
+                root=rt;
+                return;
+            } else {
+                Q.push(n->left);
+                Q.push(n->right);
+            }
+        }
+    }
+    // END 3 - Insert a Node(Level Order Insertion)
+```
+
+<hr>
+

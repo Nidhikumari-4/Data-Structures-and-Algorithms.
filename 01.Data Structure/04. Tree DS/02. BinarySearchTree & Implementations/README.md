@@ -92,7 +92,12 @@ class Node{
 ![](https://i.ibb.co/Z8j9KS4/Insertion-Pseudocode.png)
 
 ```cpp
-// _______START	 1  - Insert a Node(Iterative Approach)_______
+        case 1:
+            cout<<"Enter value : ";
+            cin>>val;
+            bt.insertNodeITTE(val);
+            break;
+// START	 1  - Insert a Node(Iterative Approach)
     void insertNodeITTE(int data){
         Node* n=new Node(data);
         if(isTreeEmpty()){
@@ -130,7 +135,7 @@ class Node{
             }
         }
     }
-    // _______END 1 - Insert a Node(Iterative Approach)_______
+    //END 1 - Insert a Node(Iterative Approach)
 ```
 <hr>
 
@@ -179,6 +184,11 @@ class Node{
 ## **[Video Reference](https://youtu.be/kjmBjhalENI)**
 
 ```cpp
+        case 3:
+            cout<<"Enter Value : ";
+            cin>>val;
+            bt.insertLevelOrder(bt.root,val);
+            break;
 //START 3 - Insert a Node(Level Order Insertion)
     void insertLevelOrder(Node* rt, int val){
         Node* nn=new Node(val);
@@ -215,4 +225,54 @@ class Node{
 ```
 
 <hr>
+
+## **4 - Print 2D**
+
+## **[Video Reference](https://youtu.be/xhkSiIeTKQo)**
+
+```cpp
+        case 4:
+            bt.print2D(bt.root,5);
+            break;
+// START 4 - Print 2D
+    void print2D(Node* root,int space){
+        if(root==NULL)
+        return;
+        print2D(root->right,space+5);
+        cout<<" ";
+        for(int i=0;i<space;i++){
+            cout<<" ";
+        }
+        cout<<root->data<<endl;;
+        print2D(root->left,space+5);
+    }
+// END 4 - Print 2D
+```
+<hr>
+
+## **5 - Height of Tree**
+
+## **[Video Reference](https://www.youtube.com/watch?v=M-ovXwd6_0I)**
+
+```cpp
+        case 5:
+           cout<<"Height of Tree is : "<< bt.Height(bt.root)<<endl;   
+           break;
+// START 5 - Height of Tree
+   int Height(Node* r){
+       if(r==NULL){
+           return -1;
+       }
+       else{
+           int lheight=Height(r->left);
+           int rheight=Height(r->right);
+
+           if(lheight>rheight)
+               return (lheight+1);
+           else
+              return (rheight+1); 
+       }
+   }
+// END 5 - Height of Tree
+```
 

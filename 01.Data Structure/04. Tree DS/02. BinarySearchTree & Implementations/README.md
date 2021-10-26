@@ -92,6 +92,9 @@ class Node{
 ![](https://i.ibb.co/Z8j9KS4/Insertion-Pseudocode.png)
 
 ```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+
         case 1:
             cout<<"Enter value : ";
             cin>>val;
@@ -146,7 +149,8 @@ class Node{
 ![](https://i.ibb.co/vcbxQjB/bst-insert-recursive.png)
 
 ```cpp
-    //Main fun calling
+    // main fun calling
+    BST bt; // BST is a class that contains all functions
     case 2:
             cout<<"Enter Value : ";
             cin>>val;
@@ -184,6 +188,8 @@ class Node{
 ## **[Video Reference](https://youtu.be/kjmBjhalENI)**
 
 ```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
         case 3:
             cout<<"Enter Value : ";
             cin>>val;
@@ -231,6 +237,8 @@ class Node{
 ## **[Video Reference](https://youtu.be/xhkSiIeTKQo)**
 
 ```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
         case 4:
             bt.print2D(bt.root,5);
             break;
@@ -255,6 +263,8 @@ class Node{
 ## **[Video Reference](https://www.youtube.com/watch?v=M-ovXwd6_0I)**
 
 ```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
         case 5:
            cout<<"Height of Tree is : "<< bt.Height(bt.root)<<endl;   
            break;
@@ -275,4 +285,6 @@ class Node{
    }
 // END 5 - Height of Tree
 ```
+
+<hr>
 

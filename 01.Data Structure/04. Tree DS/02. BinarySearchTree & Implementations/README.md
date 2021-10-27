@@ -288,3 +288,29 @@ class Node{
 
 <hr>
 
+## **6 - Sum of all Nodes in the Tree**
+
+## **[Video Reference](https://www.youtube.com/watch?v=Uze4GgUj3Fs)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+       case 6:
+           cout<<"Sum of Tree is : "<< bt.sumOfNodes(bt.root)<<endl;   
+           break; 
+// START 6 - Sum of all Nodes in the Tree
+   int sumOfNodes(Node* r){
+       if(r==NULL)
+           return 0;
+
+      else{
+          int lsum=sumOfNodes(r->left);
+          int rsum=sumOfNodes(r->right);
+          return lsum + rsum + r->data;
+      }
+   }
+// END 6 - Sum of all Nodes in the Tree
+```
+
+<hr>
+

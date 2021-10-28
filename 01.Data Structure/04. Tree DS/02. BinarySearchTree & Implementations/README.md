@@ -314,3 +314,27 @@ class Node{
 
 <hr>
 
+## **7 - Total Number of Nodes in the Tree**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+       case 7:
+           cout<<"Total no. Of Nodes are : "<< bt.countNodes(bt.root)<<endl;   
+           break;    
+// START 7 - Total Number of Nodes in the Tree
+    int countNodes(Node* r){
+       if(r==NULL)
+           return 0;
+
+      else{
+          int lcount=countNodes(r->left);// count the total nodes in left subtree
+          int rcount=countNodes(r->right);// count the total nodes in right subtree
+          return lcount +rcount +1;//+1 for root 
+      }
+   }
+// END 7 - Total Number of Nodes in the Tree
+```
+
+<hr>
+

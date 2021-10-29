@@ -163,7 +163,7 @@ class Node{
         //Node* n=new Node(val);
         // if the root is null, create a new node and return it
         if(root==NULL){
-          return new Node(val);
+           return new Node(val);
         }
  		// if the value is less than the root node then recur for the left subtree
        if(val<root->data){
@@ -245,7 +245,7 @@ class Node{
 // START 4 - Print 2D
     void print2D(Node* root,int space){
         if(root==NULL)
-        return;
+             return;
         print2D(root->right,space+5);
         cout<<" ";
         for(int i=0;i<space;i++){
@@ -255,6 +255,7 @@ class Node{
         print2D(root->left,space+5);
     }
 // END 4 - Print 2D
+
 ```
 <hr>
 
@@ -334,6 +335,30 @@ class Node{
       }
    }
 // END 7 - Total Number of Nodes in the Tree
+```
+
+<hr>
+
+## **8 - Maximum Value in the Binary Tree**
+
+## **[Video Reference](https://www.youtube.com/watch?v=SImAcxdgorU)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 8:
+           cout<<"Maximum Value in the Binary Tree is : "<<bt.maxValue(bt.root)<<endl;
+           break;  
+// START 8 - Maximum Value in the Binary Tree
+int maxValue(Node* r) {
+		if (r == NULL)
+			return 0;
+		int lmax = maxValue(r->left); // find the Maximum Value in the left subtree
+		int rmax = maxValue(r->right); // find the Maximum Value in the right subtree
+		return max(r->data, max(lmax, rmax));
+	}
+// END 8 - Maximum Value in the Binary Tree
+
 ```
 
 <hr>

@@ -100,6 +100,7 @@ class Node{
             cin>>val;
             bt.insertNodeITTE(val);
             break;
+
 // START	 1  - Insert a Node(Iterative Approach)
     void insertNodeITTE(int data){
         Node* n=new Node(data);
@@ -195,6 +196,7 @@ class Node{
             cin>>val;
             bt.insertLevelOrder(bt.root,val);
             break;
+
 //START 3 - Insert a Node(Level Order Insertion)
     void insertLevelOrder(Node* rt, int val){
         Node* nn=new Node(val);
@@ -242,6 +244,7 @@ class Node{
         case 4:
             bt.print2D(bt.root,5);
             break;
+
 // START 4 - Print 2D
     void print2D(Node* root,int space){
         if(root==NULL)
@@ -269,6 +272,7 @@ class Node{
         case 5:
            cout<<"Height of Tree is : "<< bt.Height(bt.root)<<endl;   
            break;
+
 // START 5 - Height of Tree
    int Height(Node* r){
        if(r==NULL){
@@ -299,6 +303,7 @@ class Node{
        case 6:
            cout<<"Sum of Tree is : "<< bt.sumOfNodes(bt.root)<<endl;   
            break; 
+           
 // START 6 - Sum of all Nodes in the Tree
    int sumOfNodes(Node* r){
        if(r==NULL)
@@ -323,6 +328,7 @@ class Node{
        case 7:
            cout<<"Total no. Of Nodes are : "<< bt.countNodes(bt.root)<<endl;   
            break;    
+
 // START 7 - Total Number of Nodes in the Tree
     int countNodes(Node* r){
        if(r==NULL)
@@ -349,6 +355,7 @@ class Node{
         case 8:
            cout<<"Maximum Value in the Binary Tree is : "<<bt.maxValue(bt.root)<<endl;
            break;  
+
 // START 8 - Maximum Value in the Binary Tree
 int maxValue(Node* r) {
 		if (r == NULL)
@@ -358,6 +365,44 @@ int maxValue(Node* r) {
 		return max(r->data, max(lmax, rmax));
 	}
 // END 8 - Maximum Value in the Binary Tree
+
+```
+
+<hr>
+
+## **9 - Print Level Order/Breadth First Search (using queue)**
+
+## **[Video Reference](https://youtu.be/vQIiUWofWw8)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+     case 9:
+           cout<<"The Binary Tree in Level Order/Breadth First Search (using Queue) is  ";
+           bt.printLevelOrderQueue(bt.root);
+           break;
+
+// START 9 - Print Level Order/Breadth First Search (using queue)
+void printLevelOrderQueue(Node* r){
+    if(r==NULL)
+        return;
+    
+    queue<Node*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        Node* Node=q.front();
+        q.pop();
+        if(Node != NULL){
+            cout<<Node->data<<" ";// print the current node value
+            if(Node->left != NULL)
+                 q.push(Node->left);// enqueue the left child
+            if(Node->right != NULL)
+                  q.push(Node->right);// enqueue the right child
+        }
+    }
+}
+// END 9 - Print Level Order/Breadth First Search (using queue)
 
 ```
 

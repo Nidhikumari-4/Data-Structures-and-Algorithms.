@@ -408,3 +408,27 @@ void printLevelOrderQueue(Node* r){
 
 <hr>
 
+## **10 - Print Level Order/Breadth First Search (using Recursion)**
+
+## **[Video Reference](https://youtu.be/EEm_d8WbXjs)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 10:
+           cout<<"The Binary Tree in Level Order/Breadth First Search (using Recursion) is = "<<endl;
+           bt.printLevelOrderRecursion(bt.root);
+           break;
+
+// START 10 - Print Level Order/Breadth First Search (using Recursion)
+void printLevelOrderRecursion(Node* r) {
+		int h = Height(r);
+		for (int i = 0; i <= h; i++)
+			printGivenLevel(r, i); //here i means we r passing level
+	}
+// END 10 - Print Level Order/Breadth First Search (using Recursion)
+
+```
+
+<hr>
+

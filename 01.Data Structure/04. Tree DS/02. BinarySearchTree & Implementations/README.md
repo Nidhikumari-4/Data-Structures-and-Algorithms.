@@ -432,3 +432,32 @@ void printLevelOrderRecursion(Node* r) {
 
 <hr>
 
+## **11 - Print Given Level of the Tree**
+
+## **[Video Reference](https://youtu.be/EEm_d8WbXjs)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 11:
+           int l;
+           cout<<"Enter the Level to print Level Order: ";
+           cin>>l;
+           cout<<"The Nodes in Level-" <<l <<" in Level Order are: ";
+           bt.printGivenLevel(bt.root,l);
+
+// START 11 - Print Given Level of the Tree
+    void printGivenLevel(Node* r,int level){  
+		if (r == NULL) // base case
+			return;
+		else if (level == 0)
+			cout<<r->data <<" ";
+		else { // level > 0
+			printGivenLevel(r->left, level - 1);
+			printGivenLevel(r->right, level - 1);
+		}
+	}
+// END 11 - Print Given Level of the Tree
+
+```
+

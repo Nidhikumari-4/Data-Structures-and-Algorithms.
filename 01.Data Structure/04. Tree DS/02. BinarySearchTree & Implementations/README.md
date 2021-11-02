@@ -186,7 +186,7 @@ class Node{
 
 ## **3 - Insert a Node(Level Order Insertion)**
 
-## **[Video Reference](https://youtu.be/kjmBjhalENI)**
+## **[Video Reference](https://www.youtube.com/watch?v=86g8jAQug04&ab_channel=mycodeschool)**
 
 ```cpp
 // main fun calling
@@ -249,13 +249,14 @@ class Node{
     void print2D(Node* root,int space){
         if(root==NULL)
              return;
-        print2D(root->right,space+5);
-        cout<<" ";
-        for(int i=0;i<space;i++){
+        space = space+5; // Increase distance between levels   2
+        print2D(root->right,space); 
+        cout<<endl;
+        for(int i=5;i<space;i++){
             cout<<" ";
         }
         cout<<root->data<<endl;;
-        print2D(root->left,space+5);
+        print2D(root->left,space);
     }
 // END 4 - Print 2D
 
@@ -445,6 +446,7 @@ void printLevelOrderRecursion(Node* r) {
            cin>>l;
            cout<<"The Nodes in Level-" <<l <<" in Level Order are: ";
            bt.printGivenLevel(bt.root,l);
+            break;
 
 // START 11 - Print Given Level of the Tree
     void printGivenLevel(Node* r,int level){  
@@ -460,4 +462,38 @@ void printLevelOrderRecursion(Node* r) {
 // END 11 - Print Given Level of the Tree
 
 ```
+<hr>
+
+## **12 - Sum of values at level K**
+
+## **[Video Reference](https://www.youtube.com/watch?v=jkxZySeOPgk)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+
+    case 11:
+           int l;
+           cout<<"Enter the Level to print Level Order: ";
+           cin>>l;
+           cout<<"The Nodes in Level-" <<l <<" in Level Order are: ";
+           bt.printGivenLevel(bt.root,l);
+           break;
+
+// START 12 - Sum of values at level K
+    int sum = 0;
+    int sumAtK(Node* r, int K){
+		if (r == NULL)
+			return sum;
+		else if (K == 0) // if K is at root level (0)
+			sum = sum + r->data;
+		else{
+			sumAtK(r->left, K - 1);
+			sumAtK(r->right, K - 1);
+		}
+		return sum;
+	}
+// END 12 - Sum of values at level K
+```
+<hr>
 

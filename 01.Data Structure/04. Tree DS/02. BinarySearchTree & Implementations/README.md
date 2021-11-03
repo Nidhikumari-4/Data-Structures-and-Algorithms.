@@ -471,13 +471,12 @@ void printLevelOrderRecursion(Node* r) {
 ```cpp
 // main fun calling
     BST bt; // BST is a class that contains all functions
-
-    case 11:
-           int l;
-           cout<<"Enter the Level to print Level Order: ";
-           cin>>l;
-           cout<<"The Nodes in Level-" <<l <<" in Level Order are: ";
-           bt.printGivenLevel(bt.root,l);
+    case 12:
+           int k;
+           cout<<"Enter level(K) : ";
+           cin>>k;
+           bt.sum=0;
+           cout<<"Sum of values at level " << k<<" is = "<<bt.sumAtK(bt.root,k)<<endl;
            break;
 
 // START 12 - Sum of values at level K
@@ -496,4 +495,30 @@ void printLevelOrderRecursion(Node* r) {
 // END 12 - Sum of values at level K
 ```
 <hr>
+
+## **13 - Print Pre-Order Traversal (NODE, LEFT, RIGHT)**
+
+## **[Video Reference](https://youtu.be/Pj5w6qnCXes)**
+
+![Pre-Order Traversal Pseudocode](https://i.ibb.co/Dz3mVrv/preorder.png)
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 13:
+            cout<<"The Tree Nodes in Pre-Order Fashion (NODE, LEFT, RIGHT): ";
+            bt.printPreOrder(bt.root);
+            break;
+
+// START 13 - Print Pre-Order Traversal (NODE, LEFT, RIGHT)
+void printPreOrder(Node* r) { // N L R
+      if(r==NULL)
+          return;
+      cout<<r->data;
+      printPreOrder(r->left);
+      printPreOrder(r->right);
+}
+// END 13 - Print Pre-Order Traversal
+
+```
 

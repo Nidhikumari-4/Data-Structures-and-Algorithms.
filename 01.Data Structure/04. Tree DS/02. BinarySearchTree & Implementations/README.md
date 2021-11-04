@@ -522,3 +522,32 @@ void printPreOrder(Node* r) { // N L R
 
 ```
 
+<hr>
+
+## **14 - Print In-Order Traversal (LEFT, NODE, RIGHT)**
+
+## **[Video Reference](https://www.youtube.com/watch?v=KIVdqquGehY)**
+
+![In-Order Traversal Pseudocode](https://i.ibb.co/nDmK5q2/inorder.png)
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 14:
+            cout<<"The Tree Nodes in In-Order Fashion (LEFT, NODE, RIGHT): ";
+            bt.printInOrder(bt.root);
+            break;
+
+// START 14 - Print In-Order Traversal (LEFT, NODE, RIGHT)
+    void printInOrder(Node* r) { // L N R
+         if(r==NULL)
+           return;
+         printInOrder(r->left);
+         cout<<r->data;
+         printInOrder(r->right);
+}
+// END 14 - Print In-Order Traversal
+
+
+```
+

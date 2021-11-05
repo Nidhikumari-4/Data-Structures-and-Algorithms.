@@ -551,3 +551,33 @@ void printPreOrder(Node* r) { // N L R
 
 ```
 
+<hr>
+
+## **15 - Print Post-Order Traversal (LEFT, RIGHT, NODE)**
+
+## **[Video Reference](https://www.youtube.com/watch?v=fC3s5Pj2KuE)**
+
+![Post-Order Traversal Pseudocode](https://i.ibb.co/841kbrF/postorder.png)
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 14:
+            cout<<"The Tree Nodes in In-Order Fashion (LEFT, NODE, RIGHT): ";
+            bt.printInOrder(bt.root);
+            break;
+
+// START 15 - Print Post-Order Traversal (LEFT, RIGHT, NODE)
+void printPostOrder(Node* r){
+    if(r==NULL)
+       return;
+    printPostOrder(r->left);
+    printPostOrder(r->right);
+    cout<<r->data;
+}
+// END 15 - Print Post-Order Traversal
+
+```
+
+<hr>
+

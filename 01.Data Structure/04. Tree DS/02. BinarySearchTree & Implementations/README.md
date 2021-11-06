@@ -581,3 +581,45 @@ void printPostOrder(Node* r){
 
 <hr>
 
+## **16 - Print all Paths from Root to Leaf Nodes**
+
+## **[Video Reference](https://youtu.be/zIkDfgFAg60)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 16:
+	        cout<<"All Paths from Root to Leaf Nodes are : "<<endl;
+	        bt.rootToLeaf(bt.root);
+	        break;
+
+// START 16 - Print all Paths from Root to Leaf Nodes
+void PrintStack(stack<int> st){
+    if (st.empty())
+        return;
+    int x = st.top();
+    st.pop();
+    // cout << x << ' ';  // to print all Paths from leaf to node
+    PrintStack(st);
+    cout << x << ' ';
+    st.push(x);
+}
+stack<int>st;
+// print from root to leaf node by In-Order Traversal
+void rootToLeaf(Node* r) {
+		if (r == NULL)
+			  return;
+        st.push(r->data);
+        rootToLeaf(r->left);
+        if(r->left==NULL && r->right==NULL){ // if the encountered node is a leaf node we'll print the Path
+            PrintStack(st);
+            //cout<<r->data;  // to print leaf node from left to right
+            cout<<endl;
+        }
+        rootToLeaf(r->right);
+		st.pop();
+}
+// END 16 - Print all Paths from Root to Leaf Nodes
+
+```
+

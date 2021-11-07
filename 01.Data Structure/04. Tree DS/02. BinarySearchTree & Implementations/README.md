@@ -623,3 +623,43 @@ void rootToLeaf(Node* r) {
 
 ```
 
+<hr>
+
+## **17 - Search in Binary Search Tree (Iterative Approach)**
+
+## **[Video Reference](https://youtu.be/adBuxEjVwYk)**
+
+![](https://i.ibb.co/h7FdKrf/searchiterative.png)
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 17:
+            cout<<"Enter the Value to Search : ";
+            cin>>val;
+            if(bt.iterativeSearch(val)!=NULL)
+                cout<<"Value Found";
+            else //(bt.iterativeSearch(val)==NULL)
+                cout<<"Value Not found";
+            break;
+
+// 	START 17 - Search in Binary Search Tree(Iterative Approach)
+Node* iterativeSearch(int val){
+    if(root==NULL)
+         return root;
+
+    else {
+        Node* temp=root;
+        while(temp!=NULL){
+            if(val==temp->data) // if the node is found
+                return temp;
+            else if(val<temp->data)  // traverse to the left-subtree
+                temp=temp->left;
+            else if(val>temp->data)  // traverse to the right-subtree
+                temp=temp->right;
+        }
+    }
+}        
+// 	END 17 - Search in Binary Search Tree(Iterative Approach)
+```
+

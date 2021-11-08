@@ -663,3 +663,38 @@ Node* iterativeSearch(int val){
 // 	END 17 - Search in Binary Search Tree(Iterative Approach)
 ```
 
+<hr>
+
+## **18 - Search in Binary Search Tree (Recursive Approach)**
+
+## **[Video Reference](https://youtu.be/kU9Lv3e_kxs)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 18:
+            cout<<"Enter the Value to Search : ";
+            cin>>val;
+            if(bt.recursiveSearch(bt.root,val)!=NULL)
+                cout<<"Value Found";
+            else //(bt.recursiveSearch(bt.root,val)==NULL)
+                cout<<"Value Not found";
+            break;
+
+// 	START 18 - Search in Binary Search Tree(Recursive Approach)
+Node* recursiveSearch(Node* r, int val){
+    if(r==NULL){
+        return r;
+    }
+    if(val==r->data)
+        return r;
+    else if(val < r->data)
+        return recursiveSearch(r->left,val);
+    else if(val > r->data)
+        return recursiveSearch(r->right,val);
+}
+// 	END 18 - Search in Binary Search Tree(Recursive Approach)
+```
+
+<hr>
+

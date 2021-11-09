@@ -698,3 +698,32 @@ Node* recursiveSearch(Node* r, int val){
 
 <hr>
 
+## **19 - Diameter of Binary Tree (O(n^2) Approach)**
+
+## **[Video Reference](https://youtu.be/S0Bwgtn32uI)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 19:
+             cout<<"Diameter of Binary Tree (O(n^2) Approach) is = " <<bt.diameterOfBT(bt.root);
+             break;
+
+// START 19 - Diameter of Binary Tree (O(n^2) Approach)
+int diameterOfBT(Node* r){
+    if(r==NULL)
+        return 0;
+    // maximum distance between two nodes of LHS (factor 1)
+    int leftDiameter=diameterOfBT(r->left);
+    // maximum distance between two nodes of RHS (factor 2)
+    int rightDiameter=diameterOfBT(r->right);
+    // maximum distance between left's deepest & right's deepest nodes (factor 3)
+    int dis=Height(r->left) + Height(r->right) +2; // 2 becoz the LH and RH is 1 node  after root so al together 2
+
+    int dia =max(dis,max(leftDiameter,rightDiameter));
+    return dia;
+}
+// END 19 - Diameter of Binary Tree (O(n^2) Approach)
+
+```
+

@@ -727,3 +727,35 @@ int diameterOfBT(Node* r){
 
 ```
 
+<hr>
+
+## **20 - Diameter of Binary Tree (O(n) Approach)**
+
+## **[Video Reference](https://youtu.be/Rezetez59Nk)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 20:
+             cout<<"Diameter of Binary Tree (O(n) Approach) is = "<<bt.diameterOfBinaryTree(bt.root);
+             break;
+
+// START 20 - Diameter of Binary Tree (O(n) Approach)
+int height(Node* r, int& diameter){ // to call height O(n)
+      if(r==NULL) {
+            return 0;
+        }
+        int lh = height(r->left, diameter);
+        int rh = height(r->right, diameter);
+        diameter = max(diameter, lh + rh);
+        return 1 + max(lh, rh);
+ }
+ int diameterOfBinaryTree(Node* Node){
+     int diameter = 0;
+     height(root, diameter);
+    return diameter;
+ }
+// END 20 - Diameter of Binary Tree (O(n) Approach)
+
+```
+

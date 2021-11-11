@@ -759,3 +759,62 @@ int height(Node* r, int& diameter){ // to call height O(n)
 
 ```
 
+<hr>
+
+## **21 - Delete a Node**
+
+## **[Video Reference](https://youtu.be/5_AZcOOc-kM)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 21:
+             cout<<"Enter Value to Delete: ";
+             cin>>val;
+             bt.Delete(bt.root,val);
+             break;
+
+//	START 21 - Delete a Node
+// function to find the maximum value from the left-subtree
+int maxLeft(Node* node){
+    if(node->right != NULL)
+        return maxLeft(node->right);
+    else
+        return node->data;
+}
+Node* Delete(Node* node, int val){
+    if(node == NULL)
+        return NULL;
+    if(val < node->data){
+        node->left=Delete(node->left,val);
+    }
+    else if(val > node->data){
+        node->right = Delete(node->right,val);
+    }
+    // when the node to be deleted is found
+    else{
+        if(node->left != NULL && node->right != NULL) // if the node has a left and right child
+        {
+            int lmax = maxLeft(node->left);
+            node->data = lmax;
+            node->left = Delete(node->left,lmax);
+        }
+        // if the node has only a left child
+        else if(node->left != NULL){
+            return node->left;
+        }
+        // if the node has only a right child
+        else if(node->right != NULL){
+            return node->right;
+        }
+        // if the node has no child i.e., it is a leaf node
+        else{
+            return NULL;
+        }
+    }
+    return node;
+}
+// END 21 - Delete a Node
+
+```
+

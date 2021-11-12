@@ -818,3 +818,73 @@ Node* Delete(Node* node, int val){
 
 ```
 
+<hr>
+
+## **22 - Construct BT from Pre-Order and In-Order**
+
+## **[Video Reference](https://youtu.be/oAbSNJ35qAs)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 22:   {   
+            cout<<"Enter Number of Nodes in Binary Tree: ";
+            cin>>val;
+            
+            vector<int> preorder(val);
+	        vector<int> inorder(val);
+
+            cout<<"Enter Values in Pre-Order Sequence:\n";
+            for (int i = 0; i < preorder.size(); i++){
+                 cout<<" ";
+                 cin>>preorder[i];
+            }
+            cout<<"Enter Values in In-Order Sequence:\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cin>>inorder[i];
+            }
+
+             cout<<"-------------PRE-ORDER--------------\n";
+            for (int i = 0; i < preorder.size(); i++){
+                 cout<<preorder[i]<<" ";
+            }
+             cout<<"\n--------------IN-ORDER--------------\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cout<<inorder[i]<<" ";
+            }
+             bt.root=bt.buildTreeFromInorderPreorder(preorder,inorder);
+            }
+             break;
+
+            
+// START 22 - Construct BT from Pre-Order and In-Order
+Node* buildTreeFromInorderPreorder(vector<int>& preorder, vector<int>& inorder){
+        int n = inorder.size();
+		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
+		return preInTree(preorder, 0, n - 1, inorder, 0,n - 1);
+}
+    //  preS = preorder starting index
+	//  preE= preorder ending index.
+	//  inS= inorder starting index
+	//  inE= inorder ending inex.
+Node* preInTree(vector<int>& pre, int preS, int preE, vector<int>& in, int inS, int inE){
+		if (inS > inE)
+			return NULL;
+
+		Node* n = new Node(pre[preS]);
+		int idx = inS;
+		while (in[idx] != pre[preS]){
+			idx++;
+        }
+		int tnel = idx - inS; // total no. of element on left side/right side of root.
+
+		n->left = preInTree(pre, preS + 1,preS + tnel, in, inS, idx - 1);
+		n->right = preInTree(pre, preS + tnel + 1, preE, in, idx + 1, inE);
+
+		return n;
+}
+
+// END 22 - Construct BT from Pre-Order and In-Order
+
+```
+

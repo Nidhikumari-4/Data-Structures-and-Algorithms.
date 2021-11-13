@@ -174,7 +174,6 @@ class Node{
        else if(val>root->data){
            root->right=insertRecursive(root->right,val);
        }
-       // key== root.data
        else{ 
            cout << "No duplicate values allowed!" << endl;
        }

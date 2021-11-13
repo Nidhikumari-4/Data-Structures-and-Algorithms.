@@ -888,3 +888,71 @@ Node* preInTree(vector<int>& pre, int preS, int preE, vector<int>& in, int inS, 
 
 ```
 
+<hr>
+
+## **23 - Construct BT from Post-Order and In-Order**
+
+## **[Video Reference](https://youtu.be/Lc3RBGtyn7M)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+    case 23: {
+            cout<<"Enter Number of Nodes in Binary Tree: ";
+            cin>>val;
+            
+            vector<int> postorder(val);
+	        vector<int> inorder(val);
+
+            cout<<"Enter Values in Post-Order Sequence:\n";
+            for (int i = 0; i < postorder.size(); i++){
+                 cout<<" ";
+                 cin>>postorder[i];
+            }
+            cout<<"Enter Values in In-Order Sequence:\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cin>>inorder[i];
+            }
+
+             cout<<"-------------POST-ORDER--------------\n";
+            for (int i = 0; i < postorder.size(); i++){
+                 cout<<postorder[i]<<" ";
+            }
+             cout<<"\n--------------IN-ORDER--------------\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cout<<inorder[i]<<" ";
+            }
+             bt.root=bt.buildTreeFromInorderPostorder(postorder,inorder);
+            }
+             break;
+
+// START 23 - Construct BT from Post-Order and In-Order
+Node* buildTreeFromInorderPostorder(vector<int>& postorder, vector<int>& inorder){
+        int n = postorder.size();
+		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
+		return postInTree(postorder, 0, n - 1, inorder, 0,n - 1);
+}
+    //  poS = postorder starting index
+	//  poE= postorder ending index.
+	//  inS= inorder starting index
+	//  inE= inorder ending inex.
+Node* postInTree(vector<int>& post, int poS, int poE, vector<int>& in, int inS, int inE) {
+		if (inS > inE)
+			return NULL;
+		Node* n = new Node(post[poE]);
+		int idx = inS;
+		while (in[idx] != post[poE])
+			idx++;
+		int tnel = idx - inS; // total no of elements on left side/right side of root.
+
+		n->left = postInTree(post, poS, poS + tnel - 1, in, inS, idx - 1);
+		n->right = postInTree(post, poS + tnel, poE - 1, in, idx + 1, inE);
+
+		return n;
+	}
+// END 23 - Construct BT from Post-Order and In-Order
+
+```
+
+<hr>
+

@@ -166,7 +166,7 @@ class Node{
         if(root==NULL){
            return new Node(val);
         }
- 		// if the value is less than the root node then recur for the left subtree
+ 	// if the value is less than the root node then recur for the left subtree
        if(val<root->data){
            root->left = insertRecursive(root->left, val);
        }
@@ -174,7 +174,8 @@ class Node{
        else if(val>root->data){
            root->right=insertRecursive(root->right,val);
        }
-       else{
+       // key== root.data
+       else{ 
            cout << "No duplicate values allowed!" << endl;
        }
        return root;

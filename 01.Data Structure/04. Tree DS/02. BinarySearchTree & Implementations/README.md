@@ -956,3 +956,49 @@ Node* postInTree(vector<int>& post, int poS, int poE, vector<int>& in, int inS, 
 
 <hr>
 
+## **24 - Construct BST from In-Order**
+
+## **[Video Reference](https://youtu.be/UAsLKuEMhsQ)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 24: {
+            cout<<"Enter Number of Nodes in Binary Tree: ";
+            cin>>val;
+
+             vector<int> inorder(val);
+
+            cout<<"Enter Values in In-Order Sequence:\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cin>>inorder[i];
+            }
+            cout<<"\n--------------IN-ORDER--------------\n";
+            for (int i = 0; i <inorder.size(); i++){
+                 cout<<inorder[i]<<" ";
+            }
+            bt.root=bt.buildBSTfromInorder(inorder);
+            }
+            break;
+
+// START 24 - Construct BST from In-Order
+Node* buildBSTfromInorder(vector<int>& inorder) {
+		int n = inorder.size();
+		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
+		return buildBSTfrom_Inorder(inorder, 0, n - 1);
+	}
+
+Node* buildBSTfrom_Inorder(vector<int>& in, int start, int end) {
+		if (start > end)
+			return NULL;
+		int midRoot = (start + end) / 2;
+		Node* n = new Node(in[midRoot]);
+
+		n->left = buildBSTfrom_Inorder(in, start, midRoot - 1);
+		n->right = buildBSTfrom_Inorder(in, midRoot + 1, end);
+
+		return n;
+	}
+// END 24 - Construct BST from In-Order
+```
+

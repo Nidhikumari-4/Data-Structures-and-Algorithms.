@@ -863,7 +863,7 @@ Node* buildTreeFromInorderPreorder(vector<int>& preorder, vector<int>& inorder){
 		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
 		return preInTree(preorder, 0, n - 1, inorder, 0,n - 1);
 }
-    //  preS = preorder starting index
+        //  preS = preorder starting index
 	//  preE= preorder ending index.
 	//  inS= inorder starting index
 	//  inE= inorder ending inex.
@@ -932,7 +932,7 @@ Node* buildTreeFromInorderPostorder(vector<int>& postorder, vector<int>& inorder
 		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
 		return postInTree(postorder, 0, n - 1, inorder, 0,n - 1);
 }
-    //  poS = postorder starting index
+        //  poS = postorder starting index
 	//  poE= postorder ending index.
 	//  inS= inorder starting index
 	//  inE= inorder ending inex.

@@ -1002,3 +1002,55 @@ Node* buildBSTfrom_Inorder(vector<int>& in, int start, int end) {
 // END 24 - Construct BST from In-Order
 ```
 
+<hr>
+
+## **25 - Construct BST from Pre-Order**
+
+## **[Video Reference](https://youtu.be/Bexswo4pqZQ)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 25: {
+            cout<<"Enter Number of Nodes in Binary Tree: ";
+            cin>>val;
+
+             vector<int> preorder(val);
+
+            cout<<"Enter Values in Pre-Order Sequence:\n";
+            for (int i = 0; i <preorder.size(); i++){
+                 cin>>preorder[i];
+            }
+            cout<<"\n--------------PRE-ORDER--------------\n";
+            for (int i = 0; i <preorder.size(); i++){
+                 cout<<preorder[i]<<" ";
+            }
+            bt.root=bt.buildBSTfromPreorder(preorder);
+            }
+            break;
+    
+// START 25 - Construct BST from Pre-Order
+int idx = 0;
+Node* buildBSTfromPreorder(vector<int>& preorder) {
+        int lr = -1000; // left range
+		int rr = 1000; // right range
+		idx = 0;
+        cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";	
+        return buildBSTfrom_Preorder(preorder, lr, rr);
+	}
+
+Node* buildBSTfrom_Preorder(vector<int>& pre, int lr, int rr) {
+    if (idx >= pre.size() || pre[idx] < lr || pre[idx] > rr)
+			return NULL;
+
+		Node* n = new Node(pre[idx++]);
+
+		n->left = buildBSTfrom_Preorder(pre, lr, n->data);
+		n->right = buildBSTfrom_Preorder(pre, n->data, rr);
+
+		return n;	
+	}
+// END 25 - Construct BST from Pre-Order
+
+```
+

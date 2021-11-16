@@ -1054,3 +1054,56 @@ Node* buildBSTfrom_Preorder(vector<int>& pre, int lr, int rr) {
 
 ```
 
+<hr>
+
+## **26 - Construct BST from Post-Order**
+
+## **[Video Reference](https://youtu.be/KsGXE7_y2Nw)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 26: {
+            cout<<"Enter Number of Nodes in Binary Tree: ";
+            cin>>val;
+            
+            vector<int> postorder(val);
+
+            cout<<"Enter Values in Post-Order Sequence:\n";
+            for (int i = 0; i < postorder.size(); i++){
+                 cout<<" ";
+                 cin>>postorder[i];
+            }
+            cout<<"-------------POST-ORDER--------------\n";
+            for (int i = 0; i < postorder.size(); i++){
+                 cout<<postorder[i]<<" ";
+            }
+            bt.root=bt.buildBSTfromPostorder(postorder);
+            }
+            break;
+
+// START 26 - Construct BST from Post-Order
+Node* buildBSTfromPostorder(vector<int>& postorder){
+        int lr = -1000; // left range
+		int rr = 1000; // right range
+		idx = postorder.size() - 1;
+        cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";	
+        return buildBSTfrom_Postorder(postorder, lr, rr);
+}
+Node* buildBSTfrom_Postorder(vector<int>&post, int lr, int rr) {
+		if (idx < 0 || post[idx] < lr || post[idx] > rr)
+			return NULL;
+
+		Node* n = new Node(post[idx--]);
+
+		n->right = buildBSTfrom_Postorder(post, n->data, rr);
+		n->left = buildBSTfrom_Postorder(post, lr, n->data);
+
+		return n;
+}
+// END 26 - Construct BST from Post-Order
+
+```
+
+<hr>
+

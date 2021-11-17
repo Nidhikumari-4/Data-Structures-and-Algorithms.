@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
     class Node{
@@ -33,7 +32,6 @@ using namespace std;
       return false;
     }
     }
-
 /*************************************************************************************/
 
     // _______START	 1  - Insert a Node(Iterative Approach)_______
@@ -78,7 +76,7 @@ using namespace std;
 
 /***********************************************************************************/
 
-	// _______START	2  - Insert a Node(Recursive Approach)_______
+    // _______START	2  - Insert a Node(Recursive Approach)_______
     Node* insertRecursive(Node* root, int val){
         Node* n=new Node(val);
         // if the root is null, create a new node and return it
@@ -506,7 +504,7 @@ Node* buildTreeFromInorderPostorder(vector<int>& postorder, vector<int>& inorder
 		cout<<"\nYour BT is Ready PRESS 4 AND ENTER to View";
 		return postInTree(postorder, 0, n - 1, inorder, 0,n - 1);
 }
-    //  poS = postorder starting index
+        //  poS = postorder starting index
 	//  poE= postorder ending index.
 	//  inS= inorder starting index
 	//  inE= inorder ending inex.
@@ -745,14 +743,14 @@ int main()
             break;
         
         case 15:
-	        cout<<"The Tree Nodes in Post-Order Fashion (LEFT, RIGHT, NODE):";
-	        bt.printPostOrder(bt.root);
-	        break;
+	    cout<<"The Tree Nodes in Post-Order Fashion (LEFT, RIGHT, NODE):";
+	    bt.printPostOrder(bt.root);
+	    break;
 
         case 16:
-	        cout<<"All Paths from Root to Leaf Nodes are : "<<endl;
-	        bt.rootToLeaf(bt.root);
-	        break;
+	    cout<<"All Paths from Root to Leaf Nodes are : "<<endl;
+	    bt.rootToLeaf(bt.root);
+	    break;
         
         case 17:
             cout<<"Enter the Value to Search : ";

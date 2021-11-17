@@ -951,7 +951,6 @@ Node* postInTree(vector<int>& post, int poS, int poE, vector<int>& in, int inS, 
 		return n;
 	}
 // END 23 - Construct BT from Post-Order and In-Order
-
 ```
 
 <hr>
@@ -1051,7 +1050,6 @@ Node* buildBSTfrom_Preorder(vector<int>& pre, int lr, int rr) {
 		return n;	
 	}
 // END 25 - Construct BST from Pre-Order
-
 ```
 
 <hr>

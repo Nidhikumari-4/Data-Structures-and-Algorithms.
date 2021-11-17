@@ -1107,3 +1107,40 @@ Node* buildBSTfrom_Postorder(vector<int>&post, int lr, int rr) {
 
 <hr>
 
+## **27 - Check if the Binary Tree is Balanced**
+
+## **[Video Reference](https://www.youtube.com/watch?v=lUDgp2D6sf8)**
+
+```cpp
+// main fun calling
+    BST bt; // BST is a class that contains all functions
+        case 27:
+              bt.height(bt.root);
+              cout<<bt.isBal;
+              break;
+
+// START 27 - Check if the Binary Tree is Balanced
+// Return true if difference between heights is not more than 1 and left and right subtrees 
+// are balanced, otherwise return false. 
+
+bool isBal = true; // exclusive for func 27
+    int height(Node* r) {
+		if (r == NULL)
+			return -1;
+
+		else {
+			int lheight = height(r->left);
+			int rheight = height(r->right);
+
+			// exclusive for function 27, ignore this condition for finding the height
+			if (abs(lheight - rheight) > 1) {
+				isBal = false;
+			}
+			return max(lheight, rheight) + 1;
+		}
+	}
+// END 27 - Check if the Binary Tree is Balanced
+```
+<hr>
+
+

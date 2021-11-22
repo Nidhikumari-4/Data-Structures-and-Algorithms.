@@ -6,7 +6,7 @@
 
 # **AVL TREE**
 ### **[Video Reference](https://youtu.be/u3OVSkuOdqI)**
-<br>
+
 
 ### AVL Tree is a self-balancing BST (i.e., basically a BST which remains balanced even though you insert or delete nodes).
 

@@ -78,3 +78,100 @@ Node* insert(Node* r,int val){
 
 ### **Step 1: [Practical Implementation of Deletion in AVL Tree](https://youtu.be/3UivJWAFaI4)**
 
+```cpp
+// START 4 Delete a Node in AVL Tree
+// function to find the maximum value from the left-subtree
+int maxLeft(Node* node){
+    if(node->right != NULL)
+        return maxLeft(node->right);
+    else
+        return node->data;
+}
+
+Node* Delete(Node* node, int val){
+    if(node == NULL)
+        return NULL;
+    if(val < node->data){
+        node->left=Delete(node->left,val);
+    }
+    else if(val > node->data){
+        node->right = Delete(node->right,val);
+    }
+    // when the node to be deleted is found
+    else{
+        if(node->left != NULL && node->right != NULL) 
+        {
+            int lmax = maxLeft(node->left);
+            node->data = lmax;
+            node->left = Delete(node->left,lmax);
+        }
+        // if the node has only a left child
+        else if(node->left != NULL){
+            return node->left;
+        }
+        // if the node has only a right child
+        else if(node->right != NULL){
+            return node->right;
+        }
+        // if the node has no child i.e., it is a leaf node
+        else{
+            return NULL;
+        }
+    }
+
+  int bf = getBalancedFac(node);
+		
+		// if bf is 2, it means that the deletion will happen in the right subtree
+		// this will result in L-L-Imbalance or L-R-Imbalance
+		/*
+		  => bf(r->left)=1 means remaining structure in this is:-
+		 		30 bf=2
+		 	   /
+		 	  20   bf=1
+		 	 /
+		 	10     bf=0
+		
+		 => bf(r->left)=0 means remaining structure in this is:-
+		 	   30 bf=2
+		 	  /
+		 	 20   bf=0
+		 	/  \
+		   10  25   bf=0 for both
+	  */
+		if (bf == 2 && getBalancedFac(node->left) >= 0)
+			return rightRotate(node);
+		else if (bf == 2 && getBalancedFac(node->left) == -1) {
+			node->left = leftRotate(node->left);
+			return rightRotate(node);
+		}
+		
+		// if bf is -2, it means that the deletion will happen in the left subtree
+		// this will result in R-R-Imbalance or R-L-Imbalance
+		/*
+		   => bf(r->right)=-1 means remaining structure in this is:-
+		 		10 bf=-2
+		 		  \
+		 		  20 bf=-1
+		 		    \
+		 		    30 bf=0
+		 
+		
+		
+		  => bf(r->right)=0 means remaining structure in this is:-
+		 	   10  bf=-2
+		 		 \
+		 		 20 bf=0
+		 		/  \
+		 	  15    30 bf=0 for both
+	  */
+		else if (bf == -2 && getBalancedFac(node->right) <= 0)
+			return leftRotate(node);
+		else if (bf == -2 && getBalancedFac(node->right) == 1) {
+			node->right = rightRotate(node->right);
+			return leftRotate(node);
+		}
+		return node;
+  
+}
+// END 4 Delete a Node in AVL Tree
+```

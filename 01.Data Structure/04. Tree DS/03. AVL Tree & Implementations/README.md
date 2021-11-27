@@ -72,3 +72,9 @@ Node* insert(Node* r,int val){
 // END 1 - Insert a Node in AVL Tree
 ```
 
+## **DELETION IN AVL TREE**
+
+<img width="960" alt="AVL Tree Deletion" src="https://user-images.githubusercontent.com/64855541/122783991-b021cb00-d2cf-11eb-8af2-00c64f83af94.png">
+
+### **Step 1: [Practical Implementation of Deletion in AVL Tree](https://youtu.be/3UivJWAFaI4)**
+

@@ -25,3 +25,50 @@
 
 <hr>
 
+##  **INSERTION IN AVL TREE** 
+
+### **Step 1 (Optional) : [Theoretical Insertion in AVL Tree](https://youtu.be/f0BplF93TIA)**
+
+### **Step 2 : [Practical Insertion in AVL Tree dry run + code](https://youtu.be/otiDcwZbCo4)**
+
+```cpp
+// START 1 - Insert a Node in AVL Tree
+Node* insert(Node* r,int val){
+        if(r==NULL){
+           return new Node(val);
+        }
+ 		// if the value is less than the root node then recur for the left subtree
+       if(val <r->data){
+           r->left = insert(r->left, val );
+       }
+       // if the value is less than the root node then recur for the right subtree
+       else if(val >r->data){
+           r->right=insert(r->right,val );
+       }
+       // val ==root->data
+       else{
+           cout << "No duplicate values allowed!" << endl;
+           return r;
+        }
+    int bf = getBalancedFac(r);
+        // Left Case
+        if(bf > 1 && val  < r->left->data)
+              return rightRotate(r);
+        // Right Case
+		else if (bf < -1 && val  > r->right->data)
+			return leftRotate(r);
+		// Left-Right Case
+		else if (bf > 1 && val  > r->left->data) {
+			r->left = leftRotate(r->left);
+			return rightRotate(r);
+		}
+		// Right-Left Case
+		else if (bf < -1 && val  < r->right->data) {
+			r->right = rightRotate(r->right);
+			return leftRotate(r);
+		}
+		return r;
+	}
+// END 1 - Insert a Node in AVL Tree
+```
+

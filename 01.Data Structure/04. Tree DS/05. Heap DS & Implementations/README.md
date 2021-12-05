@@ -4,7 +4,7 @@
 
 # **HEAP DS**
 ## **[Video Reference](https://youtu.be/86mQ1gD3Zgg)**
-<br>
+
 
 ## A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
 
@@ -17,6 +17,7 @@
 # **WAYS OF IMPLEMENTATION**
 
 ## **[Video Reference](https://youtu.be/XWEEmITavdc)**
+<br>
 
 ![](https://i.ibb.co/S7KWB3Q/HEAPdS.png)
 

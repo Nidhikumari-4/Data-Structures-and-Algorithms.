@@ -17,7 +17,6 @@
 # **WAYS OF IMPLEMENTATION**
 
 ## **[Video Reference](https://youtu.be/XWEEmITavdc)**
-<br>
 
 ![](https://i.ibb.co/S7KWB3Q/HEAPdS.png)
 

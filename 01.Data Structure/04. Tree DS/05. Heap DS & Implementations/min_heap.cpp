@@ -183,17 +183,17 @@ int main(){
         cin>>option;
         switch(option){
             case 0:
-				break;
+		break;
 
-			case 1:
-				cout<<"Enter Value to be Inserted: "<<endl;
-				cin>>val;
-				hp.insert(val);
-				break;
+	    case 1:
+		cout<<"Enter Value to be Inserted: "<<endl;
+		cin>>val;
+		hp.insert(val);
+		break;
 
-			case 2:
-				hp.displayArray();
-				break;
+	    case 2:
+		hp.displayArray();
+		break;
 
             case 3:
                 cout<<"Height is - "<<hp.height();
@@ -226,8 +226,8 @@ int main(){
                 for (int i = hcapacity / 2 - 1; i >= 0; i--) {
                 hp.minHeapify(i);
                 }
-				hp.heapSort();
-				break;
+		hp.heapSort();
+		break;
 
             case 8:
                 cout << "SEARCH Operation -" << endl;
@@ -235,9 +235,10 @@ int main(){
                 cin >> val;
                 hp.linearSearch(val);
                 break;
-        default:
-        cout<<"INVALID CHOICE";
-    }
+			
+            default:
+                cout<<"INVALID CHOICE";
+    } 
   }while (option !=0);
     return 0;
 }

@@ -82,12 +82,12 @@ int main(){
     Trie_Arr trA;
 Trie_Arr* tr=new Trie_Arr();
         tr->insert("antman");
-		tr->insert("ant");
-		tr->insert("batman");
-		tr->insert("bat");
-		tr->insert("batball");
-		tr->insert("nidhi");
-		tr->insert("anu");
+	tr->insert("ant");
+	tr->insert("batman");
+	tr->insert("bat");
+	tr->insert("batball");
+	tr->insert("nidhi");
+	tr->insert("anu");
         tr->insert("test");
         tr->insert("testing");
         cout<<tr->search("batb")<<endl;

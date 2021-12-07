@@ -2,13 +2,10 @@
 
 # **Implementation Using Heap**
 
-## **VI Prerequisites:** [Comparable in PQ for generic PQ](https://youtu.be/DE835GvxZMQ)
-
 ## [**My Implementation of PQ**](./PQ.cpp)
 
 ## Output of above implementation:-
 
-![](https://i.ibb.co/7QJtxHs/pq-output.png)
 
 ## **NOTE:** Implementation ()s of priority Queue is totally same as heap DS function which is covered in heap DS.
 

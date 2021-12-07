@@ -2,7 +2,7 @@
 
 # **Implementation Using Heap**
 
-## [**My Implementation of PQ**](./PQ.cpp)
+## [**My Implementation of PQ**]()
 
 ## Output of above implementation:-
 
@@ -17,4 +17,4 @@
 
 ### **Step 2:** [Problem Link.](https://practice.geeksforgeeks.org/problems/k-largest-elements3736/1)
 
-### **Step 3:** [Solution Link.](./KLargestElement.java)
+### **Step 3:** [Solution Link.]()
